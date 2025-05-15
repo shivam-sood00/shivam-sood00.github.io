@@ -21,12 +21,10 @@
                 <!-- Profile Image (left) -->
                 <div class="col-md-3 text-center mb-3 mb-md-0 d-flex flex-column align-items-center">
                     <a href="images/ProfilePic.jpeg">
-                        <img src="images/ProfilePic.jpeg" class="img-circle img-responsive shadow"
-                             style="width: 220px; border-radius: 50%; box-shadow: 0 4px 16px rgba(0,0,0,0.15);" alt="profile photo">
+                        <img src="images/ProfilePic.jpeg" class="img-circle img-responsive shadow profile-photo" alt="profile photo">
                     </a>
                     <!-- Links under image -->
                     <div class="mt-3 d-flex flex-row justify-content-center align-items-center" style="font-size: 1.15em; font-weight: 600;">
-                        <span class="mx-2" style="color: #888;">|</span>
                         <a href="mailto:shivamsood2000@gmail.com" target="_blank" class="profile-link">Email</a>
                         <span class="mx-2" style="color: #888;">|</span>
                         <a href="data/ShivamSoodResume.pdf" target="_blank" class="profile-link">CV</a>
@@ -36,12 +34,10 @@
                         <a href="https://scholar.google.com/citations?user=TiYCglgAAAAJ&hl=en" target="_blank" class="profile-link">Google Scholar</a>
                         <span class="mx-2" style="color: #888;">|</span>
                         <a href="https://www.linkedin.com/in/shivam-sood-a79866196/" target="_blank" class="profile-link">LinkedIn</a>
-                        <span class="mx-2" style="color: #888;">|</span>
-
                     </div>
                 </div>
                 <!-- Name and Description (middle) -->
-                <div class="col-md-8 text-left d-flex flex-column justify-content-center position-relative">
+                <div class="col-md-9 text-left d-flex flex-column justify-content-center position-relative">
                     <div style="position: absolute; top: 0; right: 0;">
                         <button id="dark-mode-toggle" class="btn btn-sm btn-default" style="border:1px solid #ccc;">
                             🌙
@@ -77,9 +73,6 @@
                         </p>
                     </div>
                 </div>
-                <!-- Dark mode toggle (right) -->
-                <div class="col-md-1 text-right d-flex flex-column align-items-end justify-content-start">
-                </div>
             </div>
 
             <!-- News Section -->
@@ -103,70 +96,6 @@
                 </ul>
                 <button id="show-more-news" class="btn btn-link p-0" style="font-size: 1em;">Show more</button>
             </div>
-
-            <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                // Dark mode toggle
-                const darkToggle = document.getElementById('dark-mode-toggle');
-                const body = document.body;
-                // Persist dark mode state
-                if (localStorage.getItem('dark-mode') === 'true') {
-                    body.classList.add('dark-mode');
-                    darkToggle.textContent = '☀️ Light Mode';
-                }
-                darkToggle.addEventListener('click', function() {
-                    body.classList.toggle('dark-mode');
-                    const isDark = body.classList.contains('dark-mode');
-                    darkToggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
-                    localStorage.setItem('dark-mode', isDark);
-                });
-
-                // News show more/less logic
-                var btn = document.getElementById('show-more-news');
-                var newsList = document.getElementById('news-list');
-                var hiddenItems = Array.from(newsList.children).slice(4);
-
-                // Create Show Less button
-                var showLessBtn = document.createElement('button');
-                showLessBtn.textContent = 'Show less';
-                showLessBtn.className = 'btn btn-link p-0';
-                showLessBtn.style.fontSize = '1em';
-                showLessBtn.style.display = 'none';
-
-                btn.parentNode.insertBefore(showLessBtn, btn.nextSibling);
-
-                btn.addEventListener('click', function() {
-                    hiddenItems.forEach(function(li) { li.style.display = 'list-item'; });
-                    btn.style.display = 'none';
-                    showLessBtn.style.display = '';
-                });
-
-                showLessBtn.addEventListener('click', function() {
-                    hiddenItems.forEach(function(li) { li.style.display = 'none'; });
-                    btn.style.display = '';
-                    showLessBtn.style.display = 'none';
-                    // Scroll to news section for better UX
-                    document.getElementById('news').scrollIntoView({behavior: "smooth"});
-                });
-
-                // Publications abstract toggle logic
-                var abstractLinks = document.querySelectorAll('.abstract-toggle');
-                abstractLinks.forEach(function(link) {
-                    link.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        var targetId = link.getAttribute('data-target');
-                        var abstractDiv = document.getElementById(targetId);
-                        if (abstractDiv.style.display === 'none' || abstractDiv.style.display === '') {
-                            abstractDiv.style.display = 'block';
-                            link.textContent = '[hide abstract]';
-                        } else {
-                            abstractDiv.style.display = 'none';
-                            link.textContent = '[abstract]';
-                        }
-                    });
-                });
-            });
-            </script>
 
             <!-- Publications Section -->
             <div class="mb-4">
@@ -261,7 +190,7 @@
                     <div class="card mb-3">
                         <div class="row no-gutters align-items-center">
                             <div class="col-md-3 text-center p-3">
-                                <img src="images/marmot_lab.png" class="img-fluid" style="max-width: 120px;" alt="Marmot Lab">
+                                <img src="images/marmot_lab.png" class="img-fluid" alt="Marmot Lab">
                             </div>
                             <div class="col-md-9">
                                 <div class="card-body">
@@ -276,7 +205,7 @@
                     <div class="card mb-3">
                         <div class="row no-gutters align-items-center">
                             <div class="col-md-3 text-center p-3">
-                                <img src="images/StochLab_logo.png" class="img-fluid" style="max-width: 120px;" alt="Stoch Lab">
+                                <img src="images/StochLab_logo.png" class="img-fluid" alt="Stoch Lab">
                             </div>
                             <div class="col-md-9">
                                 <div class="card-body">
@@ -291,7 +220,7 @@
                     <div class="card mb-3">
                         <div class="row no-gutters align-items-center">
                             <div class="col-md-3 text-center p-3">
-                                <img src="images/AGV_logo.jpg" class="img-fluid" style="max-width: 120px;" alt="AGV">
+                                <img src="images/AGV_logo.jpg" class="img-fluid" alt="AGV">
                             </div>
                             <div class="col-md-9">
                                 <div class="card-body">
@@ -306,7 +235,7 @@
                     <div class="card mb-3">
                         <div class="row no-gutters align-items-center">
                             <div class="col-md-3 text-center p-3">
-                                <img src="images/Vecros_logo.png" class="img-fluid" style="max-width: 120px;" alt="Vecros">
+                                <img src="images/Vecros_logo.png" class="img-fluid" alt="Vecros">
                             </div>
                             <div class="col-md-9">
                                 <div class="card-body">
@@ -417,17 +346,13 @@
                 </div>
             </div>
 
-
+            <!-- Reviewer Services Section -->
             <div class="mb-4">
-                <h3 id="extras" style="margin-bottom: 0.5em; font-size: 1.3em; font-weight: 800; color: #222;">Reviewer Services</h3>
+                <h3 id="reviewer" style="margin-bottom: 0.5em; font-size: 1.3em; font-weight: 800; color: #222;">Reviewer Services</h3>
                 <ul style="padding-left: 1.2em; margin-bottom: 0;">
                     <li>
                         International Conference on Robotics and Automation <b> ICRA </b> 2025
                     </li>
-                    <!-- <li>
-                        <b>Blog Posts:</b>
-                        <a href="https://www.notion.so/shivam-sood/Model-Predictive-Control-MPC-94ec91a98f86414dbd0703c36952e0a9" target="_blank">Model Predictive Control</a>
-                    </li> -->
                 </ul>
             </div>
             <!-- Extras Section -->
@@ -449,5 +374,69 @@
                 <small>This template is a modification to Jon Barron's <a href="https://jonbarron.info/" target="_blank">website</a>.</small>
             </footer>
         </div>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Dark mode toggle
+            const darkToggle = document.getElementById('dark-mode-toggle');
+            const body = document.body;
+            // Persist dark mode state
+            if (localStorage.getItem('dark-mode') === 'true') {
+                body.classList.add('dark-mode');
+                darkToggle.textContent = '☀️ Light Mode';
+            }
+            darkToggle.addEventListener('click', function() {
+                body.classList.toggle('dark-mode');
+                const isDark = body.classList.contains('dark-mode');
+                darkToggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+                localStorage.setItem('dark-mode', isDark);
+            });
+
+            // News show more/less logic
+            var btn = document.getElementById('show-more-news');
+            var newsList = document.getElementById('news-list');
+            var hiddenItems = Array.from(newsList.children).slice(4);
+
+            // Create Show Less button
+            var showLessBtn = document.createElement('button');
+            showLessBtn.textContent = 'Show less';
+            showLessBtn.className = 'btn btn-link p-0';
+            showLessBtn.style.fontSize = '1em';
+            showLessBtn.style.display = 'none';
+
+            btn.parentNode.insertBefore(showLessBtn, btn.nextSibling);
+
+            btn.addEventListener('click', function() {
+                hiddenItems.forEach(function(li) { li.style.display = 'list-item'; });
+                btn.style.display = 'none';
+                showLessBtn.style.display = '';
+            });
+
+            showLessBtn.addEventListener('click', function() {
+                hiddenItems.forEach(function(li) { li.style.display = 'none'; });
+                btn.style.display = '';
+                showLessBtn.style.display = 'none';
+                // Scroll to news section for better UX
+                document.getElementById('news').scrollIntoView({behavior: "smooth"});
+            });
+
+            // Publications abstract toggle logic
+            var abstractLinks = document.querySelectorAll('.abstract-toggle');
+            abstractLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var targetId = link.getAttribute('data-target');
+                    var abstractDiv = document.getElementById(targetId);
+                    if (abstractDiv.style.display === 'none' || abstractDiv.style.display === '') {
+                        abstractDiv.style.display = 'block';
+                        link.textContent = '[hide abstract]';
+                    } else {
+                        abstractDiv.style.display = 'none';
+                        link.textContent = '[abstract]';
+                    }
+                });
+            });
+        });
+        </script>
     </body>
 </html>

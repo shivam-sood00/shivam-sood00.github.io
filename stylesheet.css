@@ -1,4 +1,4 @@
-/* latin-ext */  
+/* --- Font Faces --- */
 @font-face {
   font-family: 'Lato';
   font-style: italic;
@@ -6,7 +6,6 @@
   src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-/* latin */
 @font-face {
   font-family: 'Lato';
   font-style: italic;
@@ -14,7 +13,6 @@
   src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-/* latin-ext */
 @font-face {
   font-family: 'Lato';
   font-style: italic;
@@ -22,7 +20,6 @@
   src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-/* latin */
 @font-face {
   font-family: 'Lato';
   font-style: italic;
@@ -30,7 +27,6 @@
   src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-/* latin-ext */
 @font-face {
   font-family: 'Lato';
   font-style: normal;
@@ -38,7 +34,6 @@
   src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-/* latin */
 @font-face {
   font-family: 'Lato';
   font-style: normal;
@@ -46,7 +41,6 @@
   src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-/* latin-ext */
 @font-face {
   font-family: 'Lato';
   font-style: normal;
@@ -54,7 +48,6 @@
   src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-/* latin */
 @font-face {
   font-family: 'Lato';
   font-style: normal;
@@ -63,35 +56,24 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-a {
-  color: #1772d0;
-  text-decoration: none;
-}
-
-a:focus,
-a:hover {
-  color: #f09228;
-  text-decoration: none;
-}
-
-.profile-link {
+/* --- Links --- */
+a, .profile-link {
   color: #1772d0;
   text-decoration: none;
   padding: 0 2px;
 }
+a:focus, a:hover,
 .profile-link:hover, .profile-link:focus {
   color: #f09228;
   text-decoration: underline;
 }
 
-/* General body text */
+/* --- General Body and Headings --- */
 body, td, th, tr {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 15px;
   color: #222;
 }
-
-/* Main name/title */
 h1, .display-4 {
   font-size: 2.5em;
   font-weight: 900;
@@ -99,120 +81,50 @@ h1, .display-4 {
   margin-bottom: 0.3em;
   color: #111;
 }
-
-/* Section headings */
-h2, h3 {
+h2, h3, sectionheading {
   font-size: 1.5em;
   font-weight: 800;
   color: #222;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
 }
-
-/* Card titles (Experience, Publications, Projects) */
 .card-title {
   font-size: 1.15em;
   font-weight: 700;
   color: #1772d0;
   margin-bottom: 0.2em;
 }
-
-/* Card body text */
 .card-text, .card-body p {
   font-size: 15px;
   color: #222;
 }
-
-/* Section list headings (News, Extras) */
 #news, #extras {
   font-size: 1.3em;
   font-weight: 800;
   color: #222;
 }
-
 strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
 }
-
 heading {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
 }
-
-sectionheading, h3 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
-  font-weight: 600;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-}
-
 papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 700
 }
-
 name {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 32px;
 }
 
-.one {
-  width: 160px;
-  height: 160px;
-  position: relative;
-}
-
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
-span.highlight {
-  background-color: #ffffd0;
-}
-
-.parent{
-
-  display:flex;
-  
-  gap: 5px;
-  
-  }
-
-body.bg_colour {
-  background: #fff;
-  color: #222;
-}
-
-.nav-link {
-  color: #007bff !important;
-  font-weight: 500;
-  margin: 0 8px;
-  transition: color 0.2s;
-}
-
-.nav-link:hover {
-  color: #0056b3 !important;
-  text-decoration: underline;
-}
-
+/* --- Utility Classes --- */
 .shadow {
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
-
 ul {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -220,7 +132,6 @@ ul {
 ul li {
   margin-bottom: 0.3em;
 }
-
 .container {
   max-width: 900px;
   margin: 40px auto 0 auto;
@@ -229,92 +140,83 @@ ul li {
   border-radius: 0;
   padding: 0;
 }
-
 .img-circle, .rounded-circle {
   border-radius: 50%;
   box-shadow: 0 4px 16px rgba(0,0,0,0.10);
 }
 
-/* For images in cards (publications, experience, projects) */
+/* --- Responsive and Consistent Image Styles --- */
+.profile-photo {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#content-experience .img-fluid,
+#content-experience img {
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#content-publications .img-fluid,
+#content-publications img,
+#content-Projects .img-fluid,
+#content-Projects img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .card .img-fluid,
 .card img,
 .card .img-responsive {
-    border-radius: 15px;
-    margin-bottom: 0;
-    margin-top: 0;
-    /* Add right margin for spacing from text */
-    margin-right: 20px;
-    /* Remove extra padding if present */
-    padding: 0;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-right: 20px;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: block;
 }
 
-/* Remove padding from the image column and add it to the image for better control */
-.card .col-md-3 {
-    padding-right: 0;
+/* Add vertical spacing between publication and project cards */
+#content-publications .card.mb-3,
+#content-Projects .card.mb-3 {
+  margin-bottom: 2rem;
 }
 
-/* Even larger images for Publications and Projects */
-#content-publications .col-md-3 img {
-    max-width: 100%;
-    width: 450px;
-    height: auto;
-    border-radius: 15px;
-    margin-right: 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Smaller images for Experience */
-#content-experience .col-md-3 img {
-    max-width: 100%;
-    width: 120px;
-    height: auto;
-    border-radius: 15px;
-    margin-right: 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Add vertical gap between cards */
-.card.mb-3 {
-    margin-bottom: 32px !important;
-}
-
-/* Images for Publications and Projects */
-#content-publications .col-md-6 img,
-#content-Projects .col-md-6 img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Center profile image vertically with flexbox on desktop */
-@media (min-width: 768px) {
-  .row.align-items-center {
-    align-items: center !important;
-    display: flex;
+@media (max-width: 767px) {
+  .profile-photo {
+    max-width: 140px;
   }
-  .col-md-3.text-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+  #content-experience .img-fluid,
+  #content-experience img,
+  #content-publications .img-fluid,
+  #content-publications img,
+  #content-Projects .img-fluid,
+  #content-Projects img {
+    max-width: 100%;
   }
 }
 
-/* --- Dark mode styles --- */
+/* --- Dark Mode Styles --- */
 body.dark-mode, .dark-mode .container {
   background: #181a1b !important;
   color: #e0e0e0 !important;

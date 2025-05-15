@@ -74,14 +74,60 @@ a:hover {
   text-decoration: none;
 }
 
-body,
-td,
-th,
-tr,
-p ,
-a {
+.profile-link {
+  color: #1772d0;
+  text-decoration: none;
+  padding: 0 2px;
+}
+.profile-link:hover, .profile-link:focus {
+  color: #f09228;
+  text-decoration: underline;
+}
+
+/* General body text */
+body, td, th, tr {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 17px
+  font-size: 15px;
+  color: #222;
+}
+
+/* Main name/title */
+h1, .display-4 {
+  font-size: 2.5em;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 0.3em;
+  color: #111;
+}
+
+/* Section headings */
+h2, h3 {
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #222;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Card titles (Experience, Publications, Projects) */
+.card-title {
+  font-size: 1.15em;
+  font-weight: 700;
+  color: #1772d0;
+  margin-bottom: 0.2em;
+}
+
+/* Card body text */
+.card-text, .card-body p {
+  font-size: 15px;
+  color: #222;
+}
+
+/* Section list headings (News, Extras) */
+#news, #extras {
+  font-size: 1.3em;
+  font-weight: 800;
+  color: #222;
 }
 
 strong {
@@ -92,6 +138,14 @@ strong {
 heading {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
+}
+
+sectionheading, h3 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 papertitle {
@@ -137,3 +191,159 @@ span.highlight {
   gap: 5px;
   
   }
+
+body.bg_colour {
+  background: #fff;
+  color: #222;
+}
+
+.nav-link {
+  color: #007bff !important;
+  font-weight: 500;
+  margin: 0 8px;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #0056b3 !important;
+  text-decoration: underline;
+}
+
+.shadow {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+ul {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+ul li {
+  margin-bottom: 0.3em;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto 0 auto;
+  background: #fff;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.img-circle, .rounded-circle {
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+/* For images in cards (publications, experience, projects) */
+.card .img-fluid,
+.card img,
+.card .img-responsive {
+    border-radius: 15px;
+    margin-bottom: 0;
+    margin-top: 0;
+    /* Add right margin for spacing from text */
+    margin-right: 20px;
+    /* Remove extra padding if present */
+    padding: 0;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Remove padding from the image column and add it to the image for better control */
+.card .col-md-3 {
+    padding-right: 0;
+}
+
+/* Even larger images for Publications and Projects */
+#content-publications .col-md-3 img {
+    max-width: 100%;
+    width: 450px;
+    height: auto;
+    border-radius: 15px;
+    margin-right: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Smaller images for Experience */
+#content-experience .col-md-3 img {
+    max-width: 100%;
+    width: 120px;
+    height: auto;
+    border-radius: 15px;
+    margin-right: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Add vertical gap between cards */
+.card.mb-3 {
+    margin-bottom: 32px !important;
+}
+
+/* Images for Publications and Projects */
+#content-publications .col-md-6 img,
+#content-Projects .col-md-6 img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Center profile image vertically with flexbox on desktop */
+@media (min-width: 768px) {
+  .row.align-items-center {
+    align-items: center !important;
+    display: flex;
+  }
+  .col-md-3.text-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+/* --- Dark mode styles --- */
+body.dark-mode, .dark-mode .container {
+  background: #181a1b !important;
+  color: #e0e0e0 !important;
+}
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode .card-title {
+  color: #f6c177 !important;
+}
+.dark-mode .card, .dark-mode .card-body {
+  background: #232526 !important;
+  color: #e0e0e0 !important;
+  border-color: #333 !important;
+}
+.dark-mode .profile-link, .dark-mode a {
+  color: #8ab4f8 !important;
+}
+.dark-mode .profile-link:hover, .dark-mode a:hover {
+  color: #f6c177 !important;
+}
+.dark-mode .btn, .dark-mode .btn-link, .dark-mode .btn-default {
+  background: #232526 !important;
+  color: #e0e0e0 !important;
+  border-color: #444 !important;
+}
+.dark-mode .card .img-fluid,
+.dark-mode .card img,
+.dark-mode .card .img-responsive {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  background: #232526;
+}
+.dark-mode .card.mb-3 {
+  border-color: #333 !important;
+}

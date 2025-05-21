@@ -146,7 +146,6 @@ ul li {
 }
 
 /* --- Responsive and Consistent Image Styles --- */
-/* Responsive image sizing for all devices */
 .profile-photo {
   max-width: 220px;
   width: 100%;
@@ -196,6 +195,90 @@ ul li {
   #content-experience .img-fluid, #content-experience img { max-width: 40px; }
   #content-publications .img-fluid, #content-publications img,
   #content-Projects .img-fluid, #content-Projects img { max-width: 80px; }
+}
+
+/* --- Extra Responsive Tweaks for Mobile --- */
+@media (max-width: 900px) {
+  .container {
+    max-width: 100vw !important;
+    width: 100vw !important;
+    min-width: 0 !important;
+  }
+  .row, .col-md-3, .col-md-9, .col-sm-*, .col-xs-* {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+  .profile-photo {
+    max-width: 80px !important;
+    margin-bottom: 1em;
+  }
+  .text-center, .text-left {
+    text-align: left !important;
+  }
+  .d-flex {
+    display: block !important;
+  }
+  .mb-4, .mt-4 {
+    margin-bottom: 1em !important;
+    margin-top: 1em !important;
+  }
+  h1, .display-4 {
+    font-size: 2em !important;
+  }
+  h2, h3, sectionheading {
+    font-size: 1.1em !important;
+  }
+  .profile-link {
+    display: inline-block;
+    margin-bottom: 0.5em;
+  }
+  .shadow {
+    box-shadow: none !important;
+  }
+  table {
+    display: block;
+    width: 100% !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  th, td {
+    min-width: 120px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 575px) {
+  body, .container {
+    padding: 0 1vw !important;
+  }
+  .profile-photo,
+  #content-experience .img-fluid, #content-experience img,
+  #content-publications .img-fluid, #content-publications img,
+  #content-Projects .img-fluid, #content-Projects img {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  h1, .display-4 {
+    font-size: 1.5em !important;
+  }
+}
+
+/* Ensure images and media never overflow */
+img, video {
+  max-width: 100% !important;
+  height: auto !important;
+  width: auto !important;
+}
+
+/* Prevent horizontal scroll on html/body */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* --- Dark Mode Styles --- */

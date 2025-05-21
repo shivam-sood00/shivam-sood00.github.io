@@ -204,15 +204,17 @@ ul li {
 
 @media (max-width: 767px) {
   .profile-photo {
-    max-width: 140px;
+    max-width: 100px;
   }
   #content-experience .img-fluid,
-  #content-experience img,
+  #content-experience img {
+    max-width: 80px;
+  }
   #content-publications .img-fluid,
   #content-publications img,
   #content-Projects .img-fluid,
   #content-Projects img {
-    max-width: 100%;
+    max-width: 180px;
   }
 }
 

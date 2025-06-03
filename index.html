@@ -1,442 +1,547 @@
-<!DOCTYPE HTML>
-<html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="google-site-verification" content="sHr2LshKN2RkuXMxH4kXYUVsebSP8FPli9pVWqsWeYI" />
-        <title>Shivam Sood</title>
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="stylesheet.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="icon" type="image/png" href="images/WALL-E-PNG-Transparent.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Shivam Sood">
-        <meta name="Description"
-            content="Shivam Sood | Research Intern@NUS Marmot Lab | Research Internt@Stoc Labs | Researcher@AGV IIT Kharagpur | Reinforcement Learning | Controls | Legged Robotics |">
-        <meta name="keywords"
-            content="Shivam Sood. NUS Marmot Lab, Legged Robotics, IISc Stoch Labs intern, Controls, IIT Kharagpur, Reinforcement Learning, Autonomous Ground Vehicles">
-    </head>
-    <body class="bg_colour">
-        <div class="container">
-            <div class="row align-items-center mb-4">
-                <!-- Profile Image (left) -->
-                <div class="col-md-3 text-center mb-3 mb-md-0 d-flex flex-column align-items-center">
-                    <a href="images/ProfilePic.jpeg">
-                        <img src="images/ProfilePic.jpeg" class="img-circle img-responsive shadow profile-photo" alt="profile photo">
-                    </a>
-                    <!-- Links under image -->
-                    <div class="mt-3 d-flex flex-row justify-content-center align-items-center" style="font-size: 1.15em; font-weight: 600;">
-                        <a href="mailto:shivamsood2000@gmail.com" target="_blank" class="profile-link">Email</a>
-                        <span class="mx-2" style="color: #888;">|</span>
-                        <a href="data/ShivamSoodResume.pdf" target="_blank" class="profile-link">CV</a>
-                        <span class="mx-2" style="color: #888;">|</span>
-                        <a href="https://github.com/shivam-sood00" target="_blank" class="profile-link">Github</a>
-                        <span class="mx-2" style="color: #888;">|</span>
-                        <a href="https://scholar.google.com/citations?user=TiYCglgAAAAJ&hl=en" target="_blank" class="profile-link">Google Scholar</a>
-                        <span class="mx-2" style="color: #888;">|</span>
-                        <a href="https://www.linkedin.com/in/shivam-sood-a79866196/" target="_blank" class="profile-link">LinkedIn</a>
-                    </div>
-                </div>
-                <!-- Name and Description (middle) -->
-                <div class="col-md-9 text-left d-flex flex-column justify-content-center position-relative">
-                    <div style="position: absolute; top: 0; right: 0;">
-                        <button id="dark-mode-toggle" class="btn btn-sm btn-default" style="border:1px solid #ccc;">
-                            🌙
-                        </button>
-                    </div>
-                    <h1 class="display-4" style="margin-top: 10px; margin-bottom: 10px;">Shivam Sood</h1>
-                    <div>
-                        <p>
-                            Hello! I am final year dual degree student at the
-                            <a href="http://www.iitkgp.ac.in/" target="_blank">Indian Institute of Technology</a>
-                            where I'm pursuing an integrated M.Tech in Mechanical Engineering. I am currently working with
-                            <a href="https://www.marmotlab.org/bio.html" target="_blank">Prof. Guillaume Sartoretti</a>
-                            at the <a href="https://www.marmotlab.org/index.html" target="_blank">Multi-Agent Robotic Motion (MARMot) Lab</a>
-                            on modified teacher-student frameworks for sample efficient and robust legged locomotion policies.
-                            My research interests are in the broad field of control theory and its intersection with Reinforcement Learning.
-                            I want to expand the work on scalable control policies for robust robotic motions.
-                        </p>
-                        <p>
-                            Previously, I've worked with
-                            <a href="http://www.shishirny.com/" target="_blank">Prof. Shishir N.Y. Kolathaya</a>
-                            at the <a href="http://www.stochlab.com/" target="_blank">Stochastic Robotics Lab</a>
-                            on quadrupedal locomotion using Model Predictive Control and Reinforcement Learning Policies and with
-                            <a href="https://scholar.google.co.in/citations?user=SHZ3TJgAAAAJ&hl=en" target="_blank">Prof. Debashish Chakravarty</a>
-                            in the Autonomous Ground Vehicle Research group where I benchmarked and improved upon various control algorithms for autonomous vehicles including MPC, LQR, Pure Pursuit and Stanley.
-                            When I am not indulged in robotics I love to read and paint digitally making pieces inspired by some of my favourite artists including WLOP and Sam Yung.
-                        </p>
-                        <p>
-                            Feel free to check out my
-                            <a href="data/ShivamSoodResume.pdf" target="_blank">CV</a>
-                            and drop me an
-                            <a href="mailto:shivamsood2000@gmail.com" target="_blank">e-mail</a>
-                            if you want to chat with me about anything robotics, art, or the amazing writing of Fredrik Backman!
-                        </p>
-                    </div>
-                </div>
-            </div>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 
-            <!-- News Section -->
-            <div class="mb-4">
-                <h3 id="news" style="margin-bottom: 0.5em; font-size: 1.3em; font-weight: 800; color: #222;">News</h3>
-                <ul id="news-list" style="padding-left: 1.2em; margin-bottom: 0;">
-                    <li><span style="color:#007bff; font-weight:bold;">Sep '23</span> &mdash; Paper on decaying action priors for accelerated learning accepted at <a href="https://2024.ieee-icra.org/index.html">IROS 2024</a></li>
-                    <li><span style="color:#007bff; font-weight:bold;">Mar '23</span> &mdash; Honoured to receive the Alumni Cup for outstanding achievements in Technology at IIT Kharagpur</li>
-                    <li><span style="color:#007bff; font-weight:bold;">Mar '23</span> &mdash; Started working under <a href="https://www.marmotlab.org/bio.html">Prof. Guillaume Sartoretti</a> as a research intern at <a href="https://www.marmotlab.org/index.html">Marmot Lab</a></li>
-                    <li><span style="color:#007bff; font-weight:bold;">Mar '23</span> &mdash; Selected for the prestigious IITKGPF Scholarship 2023</li>
-                    <li style="display:none;"><span style="color:#007bff; font-weight:bold;">Feb '23</span> &mdash; Won gold in Inter IIT Technology 11.0's Drona Aviation Challenge and overall gold in Inter IIT 11.0</li>
-                    <li style="display:none;"><span style="color:#007bff; font-weight:bold;">Jan '23</span> &mdash; Paper on Force control for Robust Quadruped Locomotion: A Linear Policy Approach accepted at <a href="https://www.icra2023.org/welcome">ICRA 2023</a></li>
-                    <li style="display:none;"><span style="color:#007bff; font-weight:bold;">Dec '23</span> &mdash; Representing IIT Kharagpur as the captain of the Inter IIT Technology 11.0's Drona Aviation Challenge</li>
-                    <li style="display:none;"><span style="color:#007bff; font-weight:bold;">Jul '22</span> &mdash; Paper on multiple waypoint navigation as the first author accepted at <a href="http://www.iccr.net/">ICCR 2022</a></li>
-                    <li style="display:none;"><span style="color:#007bff; font-weight:bold;">May '22</span> &mdash; Started working under <a href="http://www.shishirny.com/">Prof. Shishir N. Y. Kolathaya</a> as a research intern in <a href="https://www.stochlab.com/">Stochastic Robotics Lab</a> at <a href="https://iisc.ac.in/">IISc Bangalore</a></li>
-                    <li style="display:none;"><span style="color:#007bff; font-weight:bold;">Mar '22</span> &mdash; Won the gold medal in Inter IIT Tech Meet 2022 in DRDO UAV based UGV navigation challenge</li>
-                    <li style="display:none;"><span style="color:#007bff; font-weight:bold;">Nov '21</span> &mdash; Started working as a Robotics Software Development intern at <a href="https://vecros.com/">Vecros</a></li>
-                    <li style="display:none;"><span style="color:#007bff; font-weight:bold;">Sep '21</span> &mdash; Won the 1st place at the <a href="http://robots.uc3m.es/challenge-iros2021/">IROS-RSJ Navigation and Manipulation Challenge 2021</a></li>
-                    <li style="display:none;"><span style="color:#007bff; font-weight:bold;">Mar '20</span> &mdash; Joined <a href="https://agv.iitkgp.ac.in/" target="_blank">Autonomous Ground Vehicle Research Group</a> as a Mechatronics Team Member</li>
-                    <li style="display:none;"><span style="color:#007bff; font-weight:bold;">July '19</span> &mdash; Started my undergraduate journey at <a href="http://www.iitkgp.ac.in/" target="_blank">IIT Kharagpur</a></li>
-                </ul>
-                <button id="show-more-news" class="btn btn-link p-0" style="font-size: 1em;">Show more</button>
-            </div>
+<head>
+  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <style type="text/css">
+  /* Design Credits: Jon Barron and Deepak Pathak and Abhishek Kar and Saurabh Gupta and Tairan He*/
+  a {
+  color: #1772d0;
+  text-decoration:none;
+  }
+  a:focus, a:hover {
+  color: #f09228;
+  text-decoration:none;
+  }
+  body,td,th {
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400
+  }
+  heading {
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    font-size: 17px; /* 19 */
+    font-weight: 600 /* 1000 */
+  }
+  hr
+  {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+  strong {
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600 /* 800 */
+  }
+  strongred {
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    color: 'red' ;
+    font-size: 16px
+  }
+  sectionheading {
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 600
+  }
+  pageheading {
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    font-size: 38px;
+    font-weight: 400
+  }
+  .ImageBorder
+  {
+      border-width: 1px;
+      border-color: Black;
+  }
+  </style>
+  <link rel="shortcut icon" href="images/WALL-E-PNG-Transparent.png" type="image/x-icon">
+  <script type="text/javascript" src="js/hidebib.js"></script>
+  <title>Shivam Sood</title>
+  <meta name="Shivam Sood's Homepage" http-equiv="Content-Type" content="Shivam Sood's Homepage">
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+  <!-- Start : Google Analytics Code -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview');
+    </script>
+  <!-- End : Google Analytics Code -->
+  <!-- Scramble Script by Jeff Donahue -->
+  <script src="js/scramble.js"></script>
+</head>
+ 
+<body>
+<table width="900" border="0" align="center" border="0" cellspacing="0" cellpadding="20">
+  <tr><td>
 
-            <!-- Publications Section -->
-            <div class="mb-4">
-                <h3 id="publications" style="margin-bottom: 0.5em; font-size: 1.3em; font-weight: 800; color: #222;">Publications</h3>
-                <div id="content-publications" class="collapse in show">
-                    <!-- Publication 1 -->
-                    <div class="card mb-3">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-5 text-center">
-                                <img src="images/decap.png" class="img-fluid" alt="DecAP">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-1">DecAP : Decaying Action Priors for Accelerated Learning of Torque-Based Legged Locomotion Policies</h5>
-                                    <div class="mb-1">
-                                        <em>
-                                            Accepted at <b>IROS 2024</b>
-                                            <a href="https://arxiv.org/abs/2310.05714" target="_blank">[paper]</a>
-                                            <a href="https://www.youtube.com/watch?v=O1lcry7sHNQ" target="_blank">[video]</a>
-                                            <a href="#" class="abstract-toggle" data-target="abstract1">[abstract]</a>
-                                        </em>
-                                    </div>
-                                    <div id="abstract1" class="publication-abstract" style="display:none;">
-                                        <p class="card-text mb-0">
-                                            Optimal Control for legged robots has gone through a paradigm shift from position-based to torque-based control, owing to the latter’s compliant and robust nature. In parallel to this shift, the community has also turned to Deep Reinforcement Learning (DRL) as a promising approach to directly learn locomotion policies for complex real-life tasks. However, most end-to-end DRL approaches still operate in position space, mainly because learning in torque space is often sample-inefficient and does not consistently converge to natural gaits. To address these challenges, we introduce Decaying Action Priors (DecAP), a novel three-stage framework to learn and deploy torque policies for legged locomotion.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Publication 2 -->
-                    <div class="card mb-3">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-5 text-center">
-                                <img src="images/stoch3_combined.gif" class="img-fluid" alt="Stoch3">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-1">Force control for Robust Quadruped Locomotion: A Linear Policy Approach</h5>
-                                    <div class="mb-1">
-                                        <em>
-                                            Accepted at <b>ICRA 2023</b>
-                                            <a href="https://ieeexplore.ieee.org/document/10161080" target="_blank">[paper]</a>
-                                            <a href="https://www.stochlab.com/projects/LinPolForceControlQuad.html" target="_blank">[website]</a>
-                                            <a href="#" class="abstract-toggle" data-target="abstract2">[abstract]</a>
-                                        </em>
-                                    </div>
-                                    <div id="abstract2" class="publication-abstract" style="display:none;">
-                                        <p class="card-text mb-0">
-                                            This work presents a simple linear policy for direct force control for quadrupedal robot locomotion. The motivation is that force control is essential for highly dynamic and agile motions. Unlike the majority of the existing works that use complex nonlinear function approximators to represent the RL policy or model predictive control (MPC) methods with many optimization variables in the order of hundred, our controller uses a simple linear function approximator to represent policy.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Publication 3 -->
-                    <div class="card mb-3">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-5 text-center">
-                                <img src="images/multi_wp_paper.png" class="img-fluid" alt="Multi WP">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-1">Multiple Waypoint Navigation in Unknown Indoor Environments</h5>
-                                    <div class="mb-1">
-                                        <em>
-                                            Accepted at <b>ICCR 2022</b>
-                                            <a href="https://arxiv.org/abs/2209.08663" target="_blank">[paper]</a>
-                                            <a href="https://github.com/thisisjaskaran/multi-waypoint-indoor-navigation" target="_blank">[code]</a>
-                                            <a href="#" class="abstract-toggle" data-target="abstract3">[abstract]</a>
-                                        </em>
-                                    </div>
-                                    <div id="abstract3" class="publication-abstract" style="display:none;">
-                                        <p class="card-text mb-0">
-                                            We present a multiple waypoint path planner and controller stack for navigation in unknown indoor environments where waypoints include the goal along with the intermediary points that the robot must traverse before reaching the goal. Our approach makes use of a global planner (to find the next best waypoint at any instant), a local planner (to plan the path to a specific waypoint) and an adaptive Model Predictive Control strategy (for robust system control and faster maneuvers). We evaluate our algorithm on a set of randomly generated obstacle maps, intermediate waypoints and start-goal pairs, with results indicating significant reduction in computational costs, with high accuracies and robust control.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+  <p align="center">
+    <pageheading>Shivam Sood</pageheading><br>
+  </p>
 
-            <!-- Experience Section -->
-            <div class="mb-4">
-                <h3 id="experience" style="margin-bottom: 0.5em; font-size: 1.3em; font-weight: 800; color: #222;">Experience</h3>
-                <div id="content-experience" class="collapse in show">
-                    <!-- Experience Card 1 -->
-                    <div class="card mb-3">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-3 text-center p-3">
-                                <img src="images/marmot_lab.png" class="img-fluid" alt="Marmot Lab">
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-1">Researcher <span class="text-muted">| National University of Singapore</span></h5>
-                                    <div class="mb-1"><small class="text-secondary">Mar '23 - Present</small></div>
-                                    <p class="card-text mb-0">Working under the supervision of <a href="https://www.marmotlab.org/bio.html">Prof. Guillaume Sartoretti</a>. We are working on end-to-end compliant torque-based RL policies using modified teacher-student frameworks.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Experience Card 2 -->
-                    <div class="card mb-3">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-3 text-center p-3">
-                                <img src="images/StochLab_logo.png" class="img-fluid" alt="Stoch Lab">
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-1">Researcher <span class="text-muted">| IISc Bangalore</span></h5>
-                                    <div class="mb-1"><small class="text-secondary">May '22 - Dec '22</small></div>
-                                    <p class="card-text mb-0">Worked under the supervision of <a href="http://www.shishirny.com/">Prof. Shishir N. Y. Kolathaya</a> in <a href="https://www.stochlab.com/">Stochastic Robotics Lab</a>. We are working on legged locomotion using classical as well as reinforcement learning based controllers.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Experience Card 3 -->
-                    <div class="card mb-3">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-3 text-center p-3">
-                                <img src="images/AGV_logo.jpg" class="img-fluid" alt="AGV">
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-1">Researcher <span class="text-muted">| IIT Kharagpur</span></h5>
-                                    <div class="mb-1"><small class="text-secondary">Mar '20 - Present</small></div>
-                                    <p class="card-text mb-0">Working under the supervision of <a href="https://scholar.google.co.in/citations?user=SHZ3TJgAAAAJ&hl=en" target="_blank">Prof. Debashish Chakravarty</a> in the Autonomous Vehicle Research Group. We are a student research group working on safe and robust autonomous driving as well as taking part in various Robotics competitions all over the world including IROS, URC and IGVC.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Experience Card 4 -->
-                    <div class="card mb-3">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-3 text-center p-3">
-                                <img src="images/Vecros_logo.png" class="img-fluid" alt="Vecros">
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-1">Robotics Intern <span class="text-muted">| Vecros Technologies Private Limited</span></h5>
-                                    <div class="mb-1"><small class="text-secondary">Nov '21 - Jan '22</small></div>
-                                    <p class="card-text mb-0">Worked as a software developer at <a href="https://vecros.com/" target="_blank">Vecros</a>. We worked in industry standard Drones for factory safety inspection.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <tr>
+    <td width="30%" valign="top"><a href="images/Shivam_profile.jpeg"><img src="images/Shivam_profile.jpeg" width="100%" style="border-radius:15px"></a>
+    <p align=center>
+    | <a href="data/ShivamSoodResume.pdf">CV</a> |
+    <a href="mailto:shivamsood@u.nus.edu">Email</a> |
+    <a href="https://scholar.google.com/citations?user=TiYCglgAAAAJ&hl=en">Google Scholar</a> |
+    <br/>
+    | <a href="https://github.com/shivam-sood00">Github</a> | 
+    <a href="https://www.linkedin.com/in/shivam-sood-a79866196/">LinkedIn</a> |
+    </p>
+    <!-- <p align="center" style="margin-top:-8px;"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 156px; height: 20px;" title="Twitter Follow Button" src="https://platform.twitter.com/widgets/follow_button.2f70fb173b9000da126c79afe2098f02.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=TairanHe99&amp;show_count=false&amp;show_screen_name=true&amp;size=m&amp;time=1706734206165" data-screen-name=""></iframe><script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p> -->
+    </td>
+    <td width="70%" valign="top" align="justify">
+      <p>Hello! I am a first year robotics Ph.D. student at <a href="https://nus.edu.sg/">National University of Singapore</a>, advised by <a href="https://www.marmotlab.org/bio.html"> Guillaume Sartoretti</a>.
+      </p>
+      <p>I received my Bachelor's degree in Mechanical Engoineeering at <a href="https://www.iitkgp.ac.in/"> Indian Institute of Technology (IIT), Kharagpur </a>, during which I was fortunate to work at MARMot Lab with Prof. Guillaume Sartoretti,  
+        and <a href="https://www.stochlab.com/">Stochastic Robotics Lab</a> at <a href="https://iisc.ac.in/">IISc Bangalore</a>  with <a href="http://www.shishirny.com/">Prof. Shishir N. Y. Kolathaya</a>. I was also a part of the Autonomous Ground Vehicle Research Group</a> at IIT Kharagpur and various robotics competitions in IROS and Inter-IIT Tehcnology Events. 
+        </a>.
+      </p>
+      <p> I aim to make robots smarter and more expressive, not just functional, but systems that can genuinely help people and look awesome doing it. My research focuses on scaling up reinforcement learning by improving sample efficiency and generalization, 
+        with the long-term goal of enabling robots to compose and refine complex behaviors building upon the skills evolution already gave us.</p>
+      <p>Email: shivamsood [AT] u.nus.edu
+      </p>
+    </td>
+  </tr>
+</table>
 
-            <!-- Projects Section -->
-            <div class="mb-4">
-                <h3 id="Projects" style="margin-bottom: 0.5em; font-size: 1.3em; font-weight: 800; color: #222;">Projects</h3>
-                <div id="content-Projects" class="collapse in show">
-                    <!-- Project 1 -->
-                    <div class="card mb-3">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-5 text-center">
-                                <img src="images/pos_control_yuna.gif" class="img-fluid" alt="Yuna">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-1">End-to-End Deep RL based joint control for a hexapod robot</h5>
-                                    <div class="mb-1"><em>MARMot Lab, NUS <a href="https://shivam-sood.notion.site/Yuna-fe4b1e04055b42a594a6b71a255318e1?pvs=4" target="_blank">[website]</a></em></div>
-                                    <p class="card-text mb-0">This project is concerned with training a Proximal Policy Optimization based parallel DRL control policy for control of a hexapod robot lovingly named Yuna (based on a game character with different eye colors since that’s what Yuna’s LEDs look like :p)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 2 -->
-                    <div class="card mb-3">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-5 text-center">
-                                <img src="images/rf_mpc.gif" class="img-fluid" alt="RF MPC">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-1">Representation-Free MPC control for quadruped locomotion</h5>
-                                    <div class="mb-1"><em>Stoch Lab, IISc Bangalore <a href="https://shivam-sood.notion.site/Yuna-fe4b1e04055b42a594a6b71a255318e1?pvs=4" target="_blank">[website]</a></em></div>
-                                    <p class="card-text mb-0">The goal of the project was to develop a Representation Free Model Predictive Control for a in-house quadruped robot named Stoch3. This included solving for optimal Ground Reaction Forces based on a Single Rigid Body dynamics model while following gaits programmed using a finite state machine. The model used rotation matrices directly to get rid of the issues with euler angles (gimbal lock) and with quaternions(unwinding).</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 3 -->
-                    <div class="card mb-3">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-5 text-center">
-                                <img src="images/lqr_agv.gif" class="img-fluid" alt="LQR AGV">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-1">Optimal and Geometric controls for AGVs</h5>
-                                    <div class="mb-1"><em>AGV, IIT Kharagpur <a href="https://github.com/to-the-abyss/Linear-Quadraric-Regulator" target="_blank">[LQR Code]</a> <a href="https://github.com/to-the-abyss/geometric_controls" target="_blank">[Geometric Controls]</a></em></div>
-                                    <p class="card-text mb-0">This project was aimed at benchmarking various control algorithms for autonomous ground vehicles. This included algorithms like Model-Predictive-Control, Linear Quadratic Regulator, Pure Pursuit and Stanley.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 4 -->
-                    <div class="card mb-3">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-5 text-center">
-                                <img src="images/drdo.png" class="img-fluid" alt="DRDO">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-1">DRDO UAV-Guided UGV Navigation Challenge</h5>
-                                    <div class="mb-1"><em>IIT Kharagpur and DRDO <a href="https://drive.google.com/file/d/1QQeVtomUrKjfDxIv9BoyOJJC1fja6nSD/view" target="_blank">[Presentation]</a></em></div>
-                                    <p class="card-text mb-0">This competition was targeted at co-ordinating a UAV and an Unmanned Snow clearing vehicle for navigation in a hilly snow covered terrain and the UGV's autonomous traversal. We developed a Non-Linear Model Predictive Control based controller for the UGV and a path planning algorithm for the UAV. We won the gold medal in the competition.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 5 -->
-                    <div class="card mb-3">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-5 text-center">
-                                <img src="images/drona.gif" class="img-fluid" alt="Drona">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-1">Pluto Drone Swarm Challenge</h5>
-                                    <div class="mb-1"><em>IIT Kharagpur and Drona Aviation</em></div>
-                                    <p class="card-text mb-0">The goal of this challenge was to develop a vision based state feedback control for an indoor multi-drone system handling socket communication with the flight controller without the use of ROS. I led the team for this competition and we won a gold.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 6 -->
-                    <div class="card mb-3">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col-md-5 text-center">
-                                <img src="images/mpc_mobile.gif" class="img-fluid" alt="MPC Mobile">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-1">Multiple and Single shooting MPC for mobile robots</h5>
-                                    <div class="mb-1"><em>MARMot Lab <a href="https://github.com/to-the-abyss/Model-Predictive-Control" target="_blank">[code]</a></em></div>
-                                    <p class="card-text mb-0">This code includes various implementation of a model predictive control including multiple and single shooting methods. It includes both implementations for point tracking as well as trajectory tracking for mobile robots.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<hr/>
 
-            <!-- Reviewer Services Section -->
-            <div class="mb-4">
-                <h3 id="reviewer" style="margin-bottom: 0.5em; font-size: 1.3em; font-weight: 800; color: #222;">Reviewer Services</h3>
-                <ul style="padding-left: 1.2em; margin-bottom: 0;">
-                    <li>
-                        International Conference on Robotics and Automation <b> ICRA </b> 2025
-                    </li>
-                </ul>
-            </div>
-            <!-- Extras Section -->
-            <div class="mb-4">
-                <h3 id="extras" style="margin-bottom: 0.5em; font-size: 1.3em; font-weight: 800; color: #222;">Extras</h3>
-                <ul style="padding-left: 1.2em; margin-bottom: 0;">
-                    <li>
-                        <b>My artwork:</b>
-                        <a href="https://shivam-sood.notion.site/Featured-Artworks-and-Studies-f61f79b6039248b89c34208ac0550df3?pvs=4" target="_blank">Selected artwork and studies</a>
-                    </li>
-                    <li>
-                        <b>Blog Posts:</b>
-                        <a href="https://www.notion.so/shivam-sood/Model-Predictive-Control-MPC-94ec91a98f86414dbd0703c36952e0a9" target="_blank">Model Predictive Control</a>
-                    </li>
-                </ul>
-            </div>
+<!-- News Section -->
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+  <tr><td><sectionheading>&nbsp;&nbsp;News</sectionheading></td></tr>
+</table>
 
-            <footer class="text-center mt-4 mb-2">
-                <small>This template is a modification to Jon Barron's <a href="https://jonbarron.info/" target="_blank">website</a>.</small>
-            </footer>
-        </div>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+  <tr><td>
+    <ul id="news-list" style="list-style: none; padding-left: 0; margin: 0;">
+      <li><span style="color:#007bff; font-weight:bold;">Sep '23</span> &mdash; Paper on decaying action priors for accelerated learning accepted at <a href="https://2024.ieee-icra.org/index.html">IROS 2024</a></li>
+      <li><span style="color:#007bff; font-weight:bold;">Mar '23</span> &mdash; Honoured to receive the Alumni Cup for outstanding achievements in Technology at IIT Kharagpur</li>
+      <li><span style="color:#007bff; font-weight:bold;">Mar '23</span> &mdash; Started working under <a href="https://www.marmotlab.org/bio.html">Prof. Guillaume Sartoretti</a> as a research intern at <a href="https://www.marmotlab.org/index.html">Marmot Lab</a></li>
+      <li><span style="color:#007bff; font-weight:bold;">Mar '23</span> &mdash; Selected for the prestigious IITKGPF Scholarship 2023</li>
+      <li><span style="color:#007bff; font-weight:bold;">Feb '23</span> &mdash; Won gold in Inter IIT Technology 11.0's Drona Aviation Challenge and overall gold in Inter IIT 11.0</li>
+      <li><span style="color:#007bff; font-weight:bold;">Jan '23</span> &mdash; Paper on Force control for Robust Quadruped Locomotion: A Linear Policy Approach accepted at <a href="https://www.icra2023.org/welcome">ICRA 2023</a></li>
+      <li><span style="color:#007bff; font-weight:bold;">Dec '22</span> &mdash; Representing IIT Kharagpur as the captain of the Inter IIT Technology 11.0's Drona Aviation Challenge</li>
+      <li><span style="color:#007bff; font-weight:bold;">Jul '22</span> &mdash; Paper on multiple waypoint navigation as the first author accepted at <a href="http://www.iccr.net/">ICCR 2022</a></li>
+      <li><span style="color:#007bff; font-weight:bold;">May '22</span> &mdash; Working with <a href="http://www.shishirny.com/">Prof. Shishir N. Y. Kolathaya</a> as a research intern in <a href="https://www.stochlab.com/">Stochastic Robotics Lab</a> at <a href="https://iisc.ac.in/">IISc Bangalore</a></li>
+      <li><span style="color:#007bff; font-weight:bold;">Mar '22</span> &mdash; Won the gold medal in Inter IIT Tech Meet 2022 in DRDO UAV based UGV navigation challenge</li>
+      <li><span style="color:#007bff; font-weight:bold;">Nov '21</span> &mdash; Started working as a Robotics Software Development intern at <a href="https://vecros.com/">Vecros</a></li>
+      <li><span style="color:#007bff; font-weight:bold;">Sep '21</span> &mdash; Won the 1st place at the <a href="http://robots.uc3m.es/challenge-iros2021/">IROS-RSJ Navigation and Manipulation Challenge 2021</a></li>
+      <li><span style="color:#007bff; font-weight:bold;">Mar '20</span> &mdash; Joined <a href="https://agv.iitkgp.ac.in/" target="_blank">Autonomous Ground Vehicle Research Group</a> as a Mechatronics Team Member</li>
+      <li><span style="color:#007bff; font-weight:bold;">Jul '19</span> &mdash; Started my undergraduate journey at <a href="http://www.iitkgp.ac.in/" target="_blank">IIT Kharagpur</a></li>
+    </ul>
 
-        <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Dark mode toggle
-            const darkToggle = document.getElementById('dark-mode-toggle');
-            const body = document.body;
-            // Persist dark mode state
-            if (localStorage.getItem('dark-mode') === 'true') {
-                body.classList.add('dark-mode');
-                darkToggle.textContent = '☀️ Light Mode';
-            }
-            darkToggle.addEventListener('click', function() {
-                body.classList.toggle('dark-mode');
-                const isDark = body.classList.contains('dark-mode');
-                darkToggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
-                localStorage.setItem('dark-mode', isDark);
-            });
+    <button id="show-more-news" 
+      class="btn btn-link btn-sm"
+      style="margin: 0px 0; display: block; background: none; box-shadow: none;">
+      Show More <span aria-hidden="true">&#x25BC;</span>
+    </button>
+  </td></tr>
+</table>
 
-            // News show more/less logic
-            var btn = document.getElementById('show-more-news');
-            var newsList = document.getElementById('news-list');
-            var hiddenItems = Array.from(newsList.children).slice(4);
 
-            // Create Show Less button
-            var showLessBtn = document.createElement('button');
-            showLessBtn.textContent = 'Show less';
-            showLessBtn.className = 'btn btn-link p-0';
-            showLessBtn.style.fontSize = '1em';
-            showLessBtn.style.display = 'none';
 
-            btn.parentNode.insertBefore(showLessBtn, btn.nextSibling);
+<hr/>
 
-            btn.addEventListener('click', function() {
-                hiddenItems.forEach(function(li) { li.style.display = 'list-item'; });
-                btn.style.display = 'none';
-                showLessBtn.style.display = '';
-            });
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+  <tr><td><sectionheading>&nbsp;&nbsp;Publications</sectionheading></td></tr>
+</table>
 
-            showLessBtn.addEventListener('click', function() {
-                hiddenItems.forEach(function(li) { li.style.display = 'none'; });
-                btn.style.display = '';
-                showLessBtn.style.display = 'none';
-                // Scroll to news section for better UX
-                document.getElementById('news').scrollIntoView({behavior: "smooth"});
-            });
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
 
-            // Publications abstract toggle logic
-            var abstractLinks = document.querySelectorAll('.abstract-toggle');
-            abstractLinks.forEach(function(link) {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    var targetId = link.getAttribute('data-target');
-                    var abstractDiv = document.getElementById(targetId);
-                    if (abstractDiv.style.display === 'none' || abstractDiv.style.display === '') {
-                        abstractDiv.style.display = 'block';
-                        link.textContent = '[hide abstract]';
-                    } else {
-                        abstractDiv.style.display = 'none';
-                        link.textContent = '[abstract]';
-                    }
-                });
-            });
-        });
-        </script>
-    </body>
+    <tr>
+    <td width="40%" valign="top" align="center"><a href="https://www.youtube.com/watch?v=f6GKpPCyOGY">
+    <video playsinline autoplay loop muted src="images/apex/decap canter.mp4" poster="./images/loading-icon.gif" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+    </a></td>
+    <td width="60%" valign="top">
+      <p><a href="https://www.youtube.com/watch?v=f6GKpPCyOGY" id="APEX">
+      <heading>APEX: Action Priors Enable Efficient Exploration for Skill Imitation on Articulated Robots</heading></a><br>
+      Shivam Sood, Laukik B Nakhwa, Yuhong Cao, Sun Ge, Guillaume Sartoretti<br>
+      <br>
+      </p>
+      <div class="paper" id="APEX">
+      <!-- <a href="https://human-as-robot.github.io/">webpage</a> | -->
+      <a href="https://arxiv.org/pdf/2505.10022">pdf</a> |
+      <a href="javascript:toggleblock('apex')">abstract</a> |
+      <!-- <a shape="rect" href="javascript:togglebib('hat')" class="togglebib">bibtex</a> | -->
+      <a href="https://arxiv.org/abs/2505.10022">arXiv</a> |
+      <!-- <a href="https://github.com/RogerQi/human-policy">code</a>  -->
+
+      
+
+      <p align="justify"> <i id="apex">Learning by imitation provides an effective way for robots to develop well-regulated complex behaviors and directly benefit from natural demonstrations. State-of-the-art imitation learning (IL) approaches typically leverage Adversarial Motion Priors (AMP), which, despite their impressive results, suffer from two key limitations. They are prone to mode collapse, which often leads to overfitting to the simulation environment and thus increased sim-to-real gap, and they struggle to learn diverse behaviors effectively. To overcome these limitations, we introduce APEX (Action Priors enable Efficient eXploration): a simple yet versatile imitation learning framework that integrates demonstrations directly into reinforcement learning (RL), maintaining high exploration while grounding behavior with expert-informed priors. We achieve this through a combination of decaying action priors, which initially bias exploration toward expert demonstrations but gradually allow the policy to explore independently. This is complemented by a multi-critic RL framework that effectively balances stylistic consistency with task performance. Our approach achieves sample-efficient imitation learning and enables the acquisition of diverse skills within a single policy. APEX generalizes to varying velocities and preserves reference-like styles across complex tasks such as navigating rough terrain and climbing stairs, utilizing only flat-terrain kinematic motion data as a prior. We validate our framework through extensive hardware experiments on the Unitree Go2 quadruped. There, APEX yields diverse and agile locomotion gaits, inherent gait transitions, and the highest reported speed for the platform to the best of our knowledge (peak velocity of ~3.3 m/s on hardware). Our results establish APEX as a compelling alternative to existing IL methods, offering better efficiency, adaptability, and real-world performance.</i></p>
+
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="40%" valign="top" align="center">
+      <a href="https://www.youtube.com/watch?v=O1lcry7sHNQ">
+          <img src="images/decap/decap.png" alt="sym" width="90%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+      </a>
+    </td>
+    <td width="60%" valign="top">
+      <p><a href="https://www.youtube.com/watch?v=O1lcry7sHNQ" id="DecAP">
+      <heading>DecAP : Decaying Action Priors for Accelerated Learning of Torque-Based Legged Locomotion Policies</heading></a><br>
+      Shivam Sood, Sun Ge, Peizhuo Li, Guillaume Sartoretti<br>
+      IROS 2024</p>
+
+      <div class="paper" id="DecAP">
+      <!-- <a href="https://seqml.github.io/a2ls/">webpage</a> | -->
+      <a href="https://arxiv.org/pdf/2310.05714">pdf</a> |
+      <a href="javascript:toggleblock('decap')">abstract</a> |
+      <!-- <a shape="rect" href="javascript:togglebib('a2ls')" class="togglebib">bibtex</a> | -->
+      <a href="https://arxiv.org/abs/2310.05714">arXiv</a> |
+      <a href="https://github.com/marmotlab/decaying_action_priors">code</a> 
+
+      <p align="justify"> <i id="decap">Optimal Control for legged robots has gone through a paradigm shift from position-based to torque-based control, owing to the latter’s compliant and robust nature. In parallel to this shift, the community has also turned to Deep Reinforcement Learning (DRL) as a promising approach to directly learn locomotion policies for complex real-life tasks. However, most end-to-end DRL approaches still operate in position space, mainly because learning in torque space is often sample-inefficient and does not consistently converge to natural gaits. To address these challenges, we introduce Decaying Action Priors (DecAP), a novel three-stage framework to learn and deploy torque policies for legged locomotion.</i></p>
+</pre>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="40%" valign="top" align="center"><a href="https://www.youtube.com/watch?v=k89QdImcqdo">
+    <video playsinline autoplay loop muted src="images/force_control/stoch_combined.mp4" poster="./images/loading-icon.gif" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+    </a></td>
+    <td width="60%" valign="top">
+      <p><a href="https://www.youtube.com/watch?v=k89QdImcqdo" id="APEX">
+      <heading>Force control for Robust Quadruped Locomotion: A Linear Policy Approach</heading></a><br>
+      Aditya Shirwatkar, Vamshi Kumar Kurva, Devaraju Vinoda, Aman Singh, Aditya Sagi,
+      Himanshu Lodha, Bhavya Giri Goswami, Shivam Sood, Ketan Nehete, Shishir Kolathaya<br>
+      ICRA 2023
+      </p>
+      <div class="paper" id="hat">
+      <a href="https://www.stochlab.com/projects/LinPolForceControlQuad.html">webpage</a> |
+      <a href="https://www.stochlab.com/papers/force_lp_ICRA_2023.pdf">pdf</a> |
+      <a href="javascript:toggleblock('stoch_force')">abstract</a> |
+      <!-- <a shape="rect" href="javascript:togglebib('hat')" class="togglebib">bibtex</a> | -->
+      <a href="https://ieeexplore.ieee.org/document/10161080">paper</a> |
+      <!-- <a href="https://github.com/RogerQi/human-policy">code</a>  -->
+
+      
+
+      <p align="justify"> <i id="stoch_force">This work presents a simple linear policy for direct force control for quadrupedal robot locomotion. The motivation is that force control is essential for highly dynamic and agile motions. Unlike the majority of the existing works that use complex nonlinear function approximators to represent the RL policy or model predictive control (MPC) methods with many optimization variables in the order of hundred, our controller uses a simple linear function approximator to represent policy.</i></p>
+
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="40%" valign="top" align="center">
+      <a href="https://www.youtube.com/watch?v=JAr6UzAz4KQ">
+          <img src="images/iccr_nav/multi_wp_paper.png" alt="sym" width="90%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+      </a>
+    </td>
+    <td width="60%" valign="top">
+      <p><a href="https://www.youtube.com/watch?v=JAr6UzAz4KQ" id="ICCR">
+      <heading>Multiple Waypoint Navigation in Unknown Indoor Environments</heading></a><br>
+      Shivam Sood, Jaskaran Singh Sodhi, Parv Maheshwari, Karan Uppal, Debashish Chakravarty<br>
+      ICCR 2022</p>
+
+      <div class="paper" id="ICCR">
+      <!-- <a href="https://seqml.github.io/a2ls/">webpage</a> | -->
+      <a href="https://arxiv.org/pdf/2209.08663">pdf</a> |
+      <a href="javascript:toggleblock('iccr')">abstract</a> |
+      <!-- <a shape="rect" href="javascript:togglebib('a2ls')" class="togglebib">bibtex</a> | -->
+      <a href="https://arxiv.org/abs/2209.08663">arXiv</a> |
+      <a href="https://github.com/thisisjaskaran/multi-waypoint-indoor-navigation">code</a> 
+
+      <p align="justify"> <i id="iccr">Indoor motion planning focuses on solving the problem of navigating an agent through a cluttered environment. To date, quite a lot of work has been done in this field, but these
+                    methods often fail to find the optimal balance between
+                    computationally inexpensive online path planning, and optimality
+                    of the path. Along with this, these works often prove optimality for
+                    single-start single-goal worlds. To address these challenges, we
+                    present a multiple waypoint path planner and controller stack for
+                    navigation in unknown indoor environments where waypoints
+                    include the goal along with the intermediary points that the robot
+                    must traverse before reaching the goal. Our approach makes use
+                    of a global planner (to find the next best waypoint at any instant),
+                    a local planner (to plan the path to a specific waypoint) and an
+                    adaptive Model Predictive Control strategy (for robust system
+                    control and faster maneuvers). We evaluate our algorithm on a set
+                    of randomly generated obstacle maps, intermediate waypoints and
+                    start-goal pairs, with results indicating significant reduction in
+                    computational costs, with high accuracies and robust control.</i></p>
+</pre>
+      </div>
+    </td>
+  </tr>
+
+
+
+</table>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+  <tr><td><sectionheading>&nbsp;&nbsp;Projects</sectionheading></td></tr>
+</table>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+
+  <tr>
+    <td width="40%" valign="top" align="center">
+          <video playsinline autoplay loop muted src="images/drl_yuna/drl_yuna.mp4" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+    </td>
+    <td width="60%" valign="top">
+      <p><a href="https://shivam-sood.notion.site/Yuna-fe4b1e04055b42a594a6b71a255318e1" id="AUTOCOST">
+      <heading>End-to-End Deep RL based joint control for a hexapod robot</heading></a><br>
+      </p>
+
+      <div class="paper" id="autocost">
+      <a href="https://shivam-sood.notion.site/Yuna-fe4b1e04055b42a594a6b71a255318e1"> Documentation </a> 
+      <!-- <a href="https://github.com/oscardhc/Forum"> iOS Code</a> | -->
+      <!-- <a href="http://wukefenggao.cn"> Project Page</a> | -->
+      <!-- <a href="https://www.bilibili.com/video/BV1Rp4y187ZJ"> Farewell Video</a> -->
+
+      <p align="justify"> <i id="wkfg_abs">This project is concerned with training a Proximal Policy Optimization based parallel DRL control policy for control of a hexapod robot lovingly named Yuna (based on a game character with different eye colors since that’s what Yuna’s LEDs look like :p).</i></p>
+
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="40%" valign="top" align="center"><a href="https://ieeexplore.ieee.org/document/10802000">
+    <video playsinline autoplay loop muted src="images/RF_MPC/rf_mpc.mp4" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+    </a></td>
+    <td width="60%" valign="top">
+      <p>
+      <heading>Representation-Free MPC control for quadruped locomotion</heading><br>
+      </p>
+      <div class="paper" id="hat">      
+
+      <p align="justify"> <i id="stoch_force">The goal of the project was to develop a Representation Free Model Predictive Control for a in-house quadruped robot named Stoch3. This included solving for optimal Ground Reaction Forces based on a Single Rigid Body dynamics model while following gaits programmed using a finite state machine. The model used rotation matrices directly to get rid of the issues with euler angles (gimbal lock) and with quaternions(unwinding).</i></p>
+
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="40%" valign="top" align="center">
+          <video playsinline autoplay loop muted src="images/drl_yuna/drl_yuna.mp4" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+    </td>
+    <td width="60%" valign="top">
+      <p>
+      <heading>Optimal and Geometric controls for AGVs</heading><br>
+      </p>
+
+      <div class="paper" id="autocost">
+      <a href="https://github.com/shivam-sood00/Linear-Quadraric-Regulator"> LQR Code </a> |
+      <a href="https://github.com/shivam-sood00/geometric_controls"> Geometric Controls </a> |
+      <a href="https://github.com/shivam-sood00/MPC-for-autonomous-vehicles"> MPC Code</a> |
+      <!-- <a href="https://www.bilibili.com/video/BV1Rp4y187ZJ"> Farewell Video</a> -->
+
+      <p align="justify"> <i id="wkfg_abs">This project is concerned with training a Proximal Policy Optimization based parallel DRL control policy for control of a hexapod robot lovingly named Yuna (based on a game character with different eye colors since that’s what Yuna’s LEDs look like :p).</i></p>
+
+      </div>
+    </td>
+  </tr>
+
+    <tr>
+    <td width="40%" valign="top" align="center">
+      <a href="https://seqml.github.io/a2ls/">
+          <img src="images/uav_guide_ugv/uav_guide_ugv.png" alt="sym" width="90%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+      </a>
+    </td>
+    <td width="60%" valign="top">
+      <p>
+      <heading>DRDO UAV-Guided UGV Navigation Challenge</heading><br>
+
+      <div class="paper" id="ICCR">
+      <!-- <a href="https://seqml.github.io/a2ls/">webpage</a> | -->
+      <a href="https://drive.google.com/file/d/1QQeVtomUrKjfDxIv9BoyOJJC1fja6nSD/view">Presentation</a> 
+
+      <p align="justify"> <i id="iccr">This competition was targeted at co-ordinating a UAV and an Unmanned Snow clearing vehicle for navigation in a hilly snow covered terrain and the UGV's autonomous traversal. We developed a Non-Linear Model Predictive Control based controller for the UGV and a path planning algorithm for the UAV. We won the gold medal in the competition.</i></p>
+</pre>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="40%" valign="top" align="center">
+          <video playsinline autoplay loop muted src="images/pluto_drone/pluto_drone.mp4" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+    </td>
+    <td width="60%" valign="top">
+      <p>
+      <heading>Pluto Drone Swarm Challenge</heading><br>
+      </p>
+
+      <div class="paper" id="autocost">
+
+      <p align="justify"> <i id="wkfg_abs">The goal of this challenge was to develop a vision based state feedback control for an indoor multi-drone system handling socket communication with the flight controller without the use of ROS. I led the team for this competition and we won a gold.</i></p>
+
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="40%" valign="top" align="center">
+          <video playsinline autoplay loop muted src="images/mpc_turtlebot/mpc_turtlebot.mp4" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+    </td>
+    <td width="60%" valign="top">
+      <p>
+      <heading>Multiple and Single shooting MPC for mobile robots</heading><br>
+      </p>
+
+      <div class="paper" id="autocost">
+      <a href="https://github.com/shivam-sood00/Model-Predictive-Control"> Code </a> 
+
+      <p align="justify"> <i id="wkfg_abs">This code includes various implementation of a model predictive control including multiple and single shooting methods. It includes both implementations for point tracking as well as trajectory tracking for mobile robots.</i></p>
+
+      </div>
+    </td>
+  </tr>
+  
+
+</table>
+
+
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+  <tr><td><sectionheading>&nbsp;&nbsp;Reviewer Service</sectionheading></td></tr>
+</table>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+  <tr>
+    <td style="padding:20px;width:100%;vertical-align:middle">
+      Conference on Robot Learning <b>(CORL)</b> 2025
+      <br>
+      International Conference on Robotics and Automation <b>(ICRA)</b> 2025
+      <br>
+      <!-- International Conference on Intelligent Robots and Systems <b>(IROS)</b> 2025
+      <br>
+      International Conference on Computer Vision <b>(ICCV)</b> 2025
+      <br>
+      IEEE Transactions on Robotics <b>(TRO)</b> 2025
+      <br>
+      IEEE Robotics and Automation Letters <b>(RA-L)</b> 2025
+      <br>
+      Robotics: Science and Systems  <b>(RSS)</b> 2025
+      <br>
+      International Conference on Machine Learning <b>(ICML)</b>, 2024, 2025
+      <br>
+      International Conference on Learning Representations <b>(ICLR)</b>, 2024, 2025
+      <br>
+      IEEE Conference on Decision and Control <b>(CDC)</b>, 2023
+      <br>  
+      Conference on Neural Information Processing Systems <b>(NeurIPS)</b>, 2023
+      <br>
+      Learning for Dynamics & Control Conference <b>(L4DC)</b> 2023
+      <br>
+      AAAI Conference on Artificial Intelligence <b>(AAAI)</b> 2023, 2024, 2025
+      <br> -->
+    </td>
+  </tr>
+</table>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+  <tr><td><sectionheading>&nbsp;&nbsp;Extras</sectionheading></td></tr>
+</table>
+      <ul style="padding-left: 1.2em; margin-bottom: 0;">
+          
+              <b>My artwork:</b>
+              <a href="https://shivam-sood.notion.site/Featured-Artworks-and-Studies-f61f79b6039248b89c34208ac0550df3?pvs=4" target="_blank">Selected artwork and studies</a>
+              <br>
+              <b>Blog Posts:</b>
+              <a href="https://www.notion.so/shivam-sood/Model-Predictive-Control-MPC-94ec91a98f86414dbd0703c36952e0a9" target="_blank">Model Predictive Control</a>
+          
+      </ul>
+
+</table>
+
+<hr/>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="2">
+    <tr><td><br><p align="right">
+    Website template from <a href="http://www.cs.berkeley.edu/~barron/">here</a> and <a href="https://tairanhe.com/">here</a>
+    </font></p></td></tr>
+</table>
+
+  </td></tr>
+</table>
+<script xml:space="preserve" language="JavaScript">
+hideallbibs();
+</script>
+<script xml:space="preserve" language="JavaScript">
+  hideblock('apex');
+</script>
+<script xml:space="preserve" language="JavaScript">
+  hideblock('decap');
+</script>
+<script xml:space="preserve" language="JavaScript">
+  hideblock('stoch_force');
+</script>
+<script xml:space="preserve" language="JavaScript">
+  hideblock('iccr');
+</script>
+</body>
+
+<script>
+(function () {
+  const newsList = document.getElementById('news-list');
+  const showMoreBtn = document.getElementById('show-more-news');
+
+  // Apply the same style to Show More as Show Less
+  showMoreBtn.style.marginTop = '1rem';
+  showMoreBtn.style.background = '#007bff';
+  showMoreBtn.style.color = 'white';
+  showMoreBtn.style.border = 'none';
+  showMoreBtn.style.padding = '0.5rem 1rem';
+  showMoreBtn.style.fontSize = '1rem';
+  showMoreBtn.style.borderRadius = '4px';
+  showMoreBtn.style.cursor = 'pointer';
+
+  // Create Show Less button
+  const showLessBtn = document.createElement('button');
+  showLessBtn.id = 'show-less-news';
+  showLessBtn.style.marginTop = '1rem';
+  showLessBtn.style.background = '#007bff';
+  showLessBtn.style.color = 'white';
+  showLessBtn.style.border = 'none';
+  showLessBtn.style.padding = '0.5rem 1rem';
+  showLessBtn.style.fontSize = '1rem';
+  showLessBtn.style.borderRadius = '4px';
+  showLessBtn.style.cursor = 'pointer';
+  showLessBtn.style.display = 'none';
+  showLessBtn.innerHTML = 'Show Less <span aria-hidden="true">&#x25B2;</span>';
+
+  // Insert Show Less button after Show More
+  showMoreBtn.parentNode.insertBefore(showLessBtn, showMoreBtn.nextSibling);
+
+  const allItems = Array.from(newsList.querySelectorAll('li'));
+
+  function collapseList() {
+    allItems.forEach((li, index) => {
+      li.style.display = index < 4 ? 'list-item' : 'none';
+    });
+    showMoreBtn.style.display = '';
+    showLessBtn.style.display = 'none';
+  }
+
+  function expandList() {
+    allItems.forEach(li => li.style.display = 'list-item');
+    showMoreBtn.style.display = 'none';
+    showLessBtn.style.display = '';
+  }
+
+  // Initial collapse if there are more than 4 items
+  if (allItems.length > 4) {
+    collapseList();
+  } else {
+    showMoreBtn.style.display = 'none';
+  }
+
+  showMoreBtn.addEventListener('click', expandList);
+  showLessBtn.addEventListener('click', function () {
+    collapseList();
+    const heading = document.querySelector('sectionheading');
+    if (heading) heading.scrollIntoView({ behavior: 'smooth' });
+  });
+})();
+</script>
+
+
 </html>

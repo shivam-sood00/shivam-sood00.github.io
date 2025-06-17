@@ -680,6 +680,86 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
+	/* --- Dark Mode Styles --- */
+body.dark-mode {
+  background: #181a1b !important;
+  color: #e0e0e0 !important;
+}
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode .page-title {
+  color: #f6c177 !important;
+}
+body.dark-mode a, 
+body.dark-mode a:visited {
+  color: #8ab4f8 !important;
+}
+body.dark-mode a:hover {
+  color: #f6c177 !important;
+}
+body.dark-mode .page-cover-image,
+body.dark-mode img {
+  filter: brightness(0.85) contrast(1.1);
+}
+body.dark-mode .simple-table,
+body.dark-mode table,
+body.dark-mode th,
+body.dark-mode td {
+  background: #232526 !important;
+  color: #e0e0e0 !important;
+  border-color: #444 !important;
+}
+body.dark-mode code, 
+body.dark-mode .code {
+  background: #222 !important;
+  color: #f6c177 !important;
+}
+body.dark-mode blockquote {
+  border-left: 3px solid #f6c177;
+  color: #f6c177;
+}
+#dark-mode-toggle {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 1000;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  border: none;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.1em;
+  box-shadow: 0 2px 8px rgba(60,80,140,0.13);
+  transition: background 0.2s, color 0.2s;
+}
+#dark-mode-toggle:hover {
+  background: #f6c177;
+  color: #222;
+}
+  </style>
+</head>
+<body>
+  <button id="dark-mode-toggle" title="Toggle dark mode">🌙</button>
+  <article id="94ec91a9-8f86-414d-bd07-03c36952e0a9" class="page sans">
+    <!-- ...existing article content... -->
+    <!-- (Content omitted for brevity, keep your full article content here) -->
+  </article>
+  <span class="sans" style="font-size:14px;padding-top:2em"></span>
+  <script>
+    const btn = document.getElementById('dark-mode-toggle');
+    btn.onclick = function() {
+      document.body.classList.toggle('dark-mode');
+      btn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+      localStorage.setItem('mpc-dark-mode', document.body.classList.contains('dark-mode'));
+    };
+    // On load, restore mode
+    if(localStorage.getItem('mpc-dark-mode') === 'true') {
+      document.body.classList.add('dark-mode');
+      btn.textContent = '☀️';
+    }
+  </script>
 </style></head><body><article id="94ec91a9-8f86-414d-bd07-03c36952e0a9" class="page sans"><header><img class="page-cover-image" src="https://www.sciencefictionideas.com/wp-content/uploads/2021/02/robots-thumb-600x430.jpg" style="object-position:center 65.99%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🐈‍⬛</span></div><h1 class="page-title">Model Predictive Control (MPC)</h1><p class="page-description"></p></header><div class="page-body"><p id="214ab563-0676-80f8-9f91-ca0a2b7902ba" class="">This blog contains a practical introduction to model predictive control featuring the ‘hacks’ we pulled off to win the IROS-RSJ Navigation and Manipulation Challenge. Most of these tricks were cooked up to solve a gird world problem but they are valid for continuous real world tasks. These in no way are the most elegant solutions (we were undergrads powered by caffeine and deadlines) but they work 😛. The goal here is to make MPC approachable and beginner-friendly. I’ve also thrown in simple ROS2 and TurtleBot code so you can get your hands dirty right away.</p><div id="2a37b852-b54c-49cb-87c1-6b18bbde7416" class="column-list"><div id="3bc4a5bb-bc39-49c4-937a-5cc462150a98" style="width:31.25%" class="column"><figure id="7393e8df-861e-4617-8ef7-edaadb3838ce" class="image" style="text-align:left"><a href="Model%20Predictive%20Control%20(MPC)%2094ec91a98f86414dbd0703c36952e0a9/Untitled.png"><img style="width:192px" src="Model%20Predictive%20Control%20(MPC)%2094ec91a98f86414dbd0703c36952e0a9/Untitled.png"/></a></figure></div><div id="7b95b6bb-55b6-476e-bd8b-fa7eae82cc29" style="width:68.75%" class="column"><p id="9c1c5f67-9007-4d38-a6d1-9b5b163de210" class=""><em><strong>An analogy:</strong></em><em> </em>Imagine you are an artist about to create/recreate a piece. You have a vision for the final piece. You start laying brushstrokes on your sketchbook focusing on one part of the drawing at a time. Along the way you lay brushstrokes that are not exactly what you intended them to be, maybe they are  a little too thick, maybe in the wrong orientation or you just accidentally laid the brush at the wrong place. You observe these errors and work from there, planning your further brushstrokes accordingly. This continual adjustment process is key.</p><p id="170e06d3-972b-4252-b1a5-14cc0d6a110a" class="">
 </p></div></div><p id="25179b4f-e7f1-470b-9e28-c37665bcea66" class="">
 </p><p id="7ed5f995-d283-4105-a1b8-35d9af5ae8f2" class="">Model Predictive Control works on a similar principle of iterative correction and planning:</p><ul id="127b1377-fd57-442a-b655-4a16b133c2b3" class="bulleted-list"><li style="list-style-type:disc">It solves an <strong>optimal control problem</strong> for a finite <strong>prediction horizon</strong>. </li></ul><ul id="539caa7c-4dbc-4bda-a7d4-83976f0edf56" class="bulleted-list"><li style="list-style-type:disc">Using the current state as the initial state and the system model, a set of optimal control actions are calculated for the prediction horizon of which only the <strong>first control action</strong> is applied to the system. </li></ul><ul id="bc0656c9-eaec-407e-ac8e-d2151dd72090" class="bulleted-list"><li style="list-style-type:disc">The control problem is then again solved using the new state as the current state and the process is repeated.</li></ul><p id="46fb6b52-aada-42fd-940d-23c4486ca0d0" class="">The last step ensures that we are continually taking care of any <strong>uncertainties in the system model </strong>as the models are generally only an estimate of the real world dynamics. The beauty of this is that it allows us to get away with using simpler system models to reduce the complexity of high DOF systems like quadrupeds and humanoids. </p><p id="01e48ab9-b1f8-485f-a56f-25e3b19f7e6f" class="">MPC is generally quite robust to <strong>noises</strong> since it plans how to recover in finite time (our prediction horizon), rather than recovering in a single time step producing jerky movements.</p><table id="4021c6f8-ed10-45f7-9212-d666cbb57c4f" class="simple-table"><tbody><tr id="114df879-12c3-46c4-adeb-6252908e4f20"><td id="N[~C" class="block-color-blue_background" style="width:349px">Optimal Control Problem/ Goal</td><td id="lHqA" class="" style="width:349px">Final artwork</td></tr><tr id="78c0f20c-67df-4a34-b1c1-630dce94124a"><td id="N[~C" class="block-color-blue_background" style="width:349px">Prediction Horizon</td><td id="lHqA" class="" style="width:349px">The part of drawing you are currently focusing on</td></tr><tr id="ded8baf7-2403-4836-80f1-f9607ce8363e"><td id="N[~C" class="block-color-blue_background" style="width:349px">Applying the first control action</td><td id="lHqA" class="" style="width:349px">Single brushstroke</td></tr><tr id="00881ba5-8019-47ff-b448-b43da0fa1595"><td id="N[~C" class="block-color-blue_background" style="width:349px">Uncertainties in the system model</td><td id="lHqA" class="" style="width:349px">Slightly off brushstrokes</td></tr><tr id="241eff9b-a49b-4150-afb2-c612dd023829"><td id="N[~C" class="block-color-blue_background" style="width:349px">Noise</td><td id="lHqA" class="" style="width:349px">Accidental or unintentional brushstrokes</td></tr></tbody></table><p id="d19ac4ba-344a-43ec-871e-bcb2ec5a0365" class="">

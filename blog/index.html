@@ -1,111 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shivam's Blog</title>
-  <meta name="description" content="Blog posts by Shivam Sood">
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600&display=swap" rel="stylesheet">
+  <meta name="description" content="Blog posts by Shivam Sood" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #2e3440;
+      --text: #eceff4;
+      --accent: #88c0d0;
+      --accent-hover: #a3be8c;
+      --muted: #81a1c1;
+      --card: #3b4252;
+      --border: #4c566a;
+      --radius: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #f8fafc 0%, #e3e9f7 100%);
-      color: #222;
-      padding: 2.5em 1.5em;
-      max-width: 650px;
-      margin: 40px auto 0 auto;
-      border-radius: 18px;
-      box-shadow: 0 6px 32px rgba(60,80,140,0.10);
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 2rem 1.5rem;
+      max-width: 720px;
+      margin: 0 auto;
     }
+
+    header {
+      margin-bottom: 2.5rem;
+    }
+
     h1 {
-      color: #2a3a5e;
-      font-size: 2.3em;
-      font-weight: 700;
-      margin-bottom: 0.2em;
-      letter-spacing: -1px;
-    }
-    .subtitle {
-      color: #4b5c7a;
-      font-size: 1.15em;
-      margin-bottom: 2em;
-    }
-    .blog-list {
-      list-style: none;
-      padding-left: 0;
-      margin-bottom: 2.5em;
-    }
-    .blog-list li {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(60,80,140,0.06);
-      margin-bottom: 1.5em;
-      padding: 1.2em 1.5em;
-      transition: box-shadow 0.2s;
-      display: flex;
-      align-items: center;
-    }
-    .blog-list li:hover {
-      box-shadow: 0 4px 16px rgba(60,80,140,0.13);
-    }
-    .blog-list a {
-      color: #1772d0;
-      font-size: 1.13em;
+      font-size: 2.4rem;
       font-weight: 600;
+      color: #8fbcbb;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    .blog-list {
+      display: grid;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      margin-top: 2rem;
+    }
+
+    .post {
+      background: var(--card);
+      padding: 1.25rem 1.5rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      transition: transform 0.2s ease, border-color 0.2s;
+    }
+
+    .post:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .post a {
       text-decoration: none;
-      transition: color 0.2s;
-      display: flex;
-      align-items: center;
+      color: var(--accent);
+      font-weight: 600;
+      display: block;
+      font-size: 1.1rem;
     }
-    .blog-list a:hover {
-      color: #f09228;
-      text-decoration: underline;
+
+    .post-meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
     }
-    .blog-icon {
-      font-size: 1.5em;
-      margin-right: 0.7em;
-    }
+
     .home-link {
       display: inline-block;
-      margin-top: 1.5em;
-      padding: 0.6em 1.3em;
-      background: #1772d0;
-      color: #fff;
-      border-radius: 8px;
-      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 0.5rem 1rem;
+      background: #434c5e;
       text-decoration: none;
-      box-shadow: 0 2px 8px rgba(60,80,140,0.08);
       transition: background 0.2s, color 0.2s;
     }
+
     .home-link:hover {
-      background: #f09228;
-      color: #fff;
-      text-decoration: none;
+      background: var(--accent);
+      color: var(--bg);
     }
+
     @media (max-width: 600px) {
       body {
-        padding: 1.2em 0.3em;
-        border-radius: 0;
-        margin: 0;
-      }
-      .blog-list li {
-        padding: 1em 0.7em;
+        padding: 1.2rem 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Shivam's Blog</h1>
-  <div class="subtitle">
-    Welcome to my blog! I share insights and tutorials on robotics, control, and learning from my research journey.<br>
-    <!-- <span style="color:#1772d0;">Currently, there is one post available:</span> -->
-  </div>
-  <ul class="blog-list">
-    <li>
-      <a href="Model-Predictive-Control-(MPC).html">
-        <span class="blog-icon">🤖</span>
-        Understanding Model Predictive Control
-      </a>
-    </li>
-  </ul>
-  <a href="https://shivamsood.org" class="home-link">← Back to Home</a>
+  <header>
+    <h1>Shivam's Blog</h1>
+    <p class="subtitle">I share insights & tutorials on robotics, control, and reinforcement learning from my research journey</p>
+  </header>
+
+  <main>
+    <section class="blog-list">
+      <div class="post">
+        <a href="Model-Predictive-Control-(MPC).html">🤖 Understanding Model Predictive Control</a>
+        <div class="post-meta">June 2025 &nbsp;•&nbsp; #control #robotics</div>
+      </div>
+
+      <!-- Future posts go here -->
+      <!-- <div class="post">
+        <a href="#">🧠 Deep Learning for Locomotion</a>
+        <div class="post-meta">Coming Soon &nbsp;•&nbsp; #RL #locomotion</div>
+      </div> -->
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://shivamsood.org" class="home-link">← Back to Home</a>
+  </footer>
 </body>
 </html>

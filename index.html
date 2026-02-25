@@ -1,8 +1,19 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shivam Sood's homepage">
+  <meta property="og:title" content="Shivam Sood">
+  <meta property="og:description" content="Shivam Sood's homepage">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shivamsood.org/">
+  <meta property="og:image" content="https://shivamsood.org/images/Shivam_profile.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shivam Sood">
+  <meta name="twitter:description" content="Shivam Sood's homepage">
+  <meta name="twitter:image" content="https://shivamsood.org/images/Shivam_profile.jpeg">
   <style type="text/css">
   /* Design Credits: Jon Barron and Deepak Pathak and Abhishek Kar and Saurabh Gupta and Tairan He*/
   a {
@@ -18,7 +29,7 @@
     font-size: 16px;
     font-weight: 400
   }
-  heading {
+  .entry-title {
     font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
     font-size: 17px; /* 19 */
     font-weight: 600 /* 1000 */
@@ -39,15 +50,44 @@
     color: 'red' ;
     font-size: 16px
   }
-  sectionheading {
+  .sectionheading {
     font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
     font-size: 22px;
     font-weight: 600
   }
-  pageheading {
+  .pageheading {
     font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
     font-size: 38px;
     font-weight: 400
+  }
+  .pageheading, .sectionheading, .entry-title {
+    margin: 0;
+  }
+  .abstract-toggle {
+    background: none;
+    border: none;
+    color: #1772d0;
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+  }
+  .abstract-toggle:focus,
+  .abstract-toggle:hover {
+    color: #f09228;
+  }
+  .news-toggle-btn {
+    margin-top: 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .news-toggle-btn:focus,
+  .news-toggle-btn:hover {
+    background: #005ec4;
   }
   .ImageBorder
   {
@@ -56,39 +96,27 @@
   }
   </style>
   <link rel="shortcut icon" href="images/WALL-E-PNG-Transparent.png" type="image/x-icon">
-  <script type="text/javascript" src="js/hidebib.js"></script>
+  <script src="js/hidebib.js"></script>
   <title>Shivam Sood</title>
-  <meta name="Shivam Sood's Homepage" http-equiv="Content-Type" content="Shivam Sood's Homepage">
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
-  <!-- Start : Google Analytics Code -->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-XXXXX-Y', 'auto');
-    ga('send', 'pageview');
-    </script>
-  <!-- End : Google Analytics Code -->
-  <!-- Scramble Script by Jeff Donahue -->
-  <script src="js/scramble.js"></script>
 </head>
  
 <body>
-<table width="900" border="0" align="center" border="0" cellspacing="0" cellpadding="20">
+<table width="100%" style="max-width:900px;" border="0" align="center" cellspacing="0" cellpadding="20">
   <tr><td>
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-  <p align="center">
-    <pageheading>Shivam Sood</pageheading><br>
-  </p>
-
   <tr>
-    <td width="30%" valign="top"><a href="images/Shivam_profile.jpeg"><img src="images/Shivam_profile.jpeg" width="100%" style="border-radius:15px"></a>
+    <td colspan="2" align="center" style="padding-bottom:0;">
+      <h1 class="pageheading">Shivam Sood</h1>
+    </td>
+  </tr>
+  <tr>
+    <td width="30%" valign="top"><a href="images/Shivam_profile.jpeg"><img src="images/Shivam_profile.jpeg" alt="Portrait of Shivam Sood" width="100%" style="border-radius:15px"></a>
     <p align=center>
     | <a href="data/ShivamSoodResume.pdf">CV</a> |
     <a href="mailto:shivamsood@u.nus.edu">Email</a> |
-    <a href="https://scholar.google.com/citations?user=TiYCglgAAAAJ&hl=en">Google Scholar</a> |
+    <a href="https://scholar.google.com/citations?user=TiYCglgAAAAJ&amp;hl=en">Google Scholar</a> |
     <br/>
     | <a href="https://github.com/shivam-sood00">Github</a> | 
     <a href="https://www.linkedin.com/in/shivam-sood-a79866196/">LinkedIn</a> |
@@ -99,25 +127,22 @@
     </p>  
   </td>
     <td width="70%" valign="top" align="justify">
-      <p>Hello! I am a first year robotics Ph.D. student at <a href="https://nus.edu.sg/">National University of Singapore</a>, advised by <a href="https://www.marmotlab.org/bio.html"> Guillaume Sartoretti</a>.
+      <p>Hello! I am a robotics Ph.D. student at <a href="https://nus.edu.sg/">National University of Singapore</a>, advised by <a href="https://www.marmotlab.org/bio.html"> Prof. Guillaume Sartoretti</a>.
       </p>
       <p>I received my Bachelor's degree in Mechanical Engineering at <a href="https://www.iitkgp.ac.in/"> Indian Institute of Technology (IIT), Kharagpur </a>, during which I was fortunate to work at MARMot Lab with Prof. Guillaume Sartoretti,  
-        and <a href="https://www.stochlab.com/">Stochastic Robotics Lab</a> at <a href="https://iisc.ac.in/">IISc Bangalore</a>  with <a href="http://www.shishirny.com/">Prof. Shishir N. Y. Kolathaya</a>. I was also a part of the Autonomous Ground Vehicle Research Group</a> at IIT Kharagpur and various robotics competitions in IROS and Inter-IIT Tehcnology Events. 
-        </a>.
+        and <a href="https://www.stochlab.com/">Stochastic Robotics Lab</a> at <a href="https://iisc.ac.in/">IISc Bangalore</a>  with <a href="http://www.shishirny.com/">Prof. Shishir N. Y. Kolathaya</a>. I was also a part of the Autonomous Ground Vehicle Research Group at IIT Kharagpur and various robotics competitions in IROS and Inter-IIT Technology Events.
       </p>
-      <p> I aim to make robots smarter and more expressive, not just functional, but systems that can genuinely help people and look awesome doing it. My research focuses on scaling up reinforcement learning by improving sample efficiency and generalization, 
-        with the long-term goal of enabling robots to compose and refine complex behaviors building upon the skills evolution already gave us.</p>
+      <!-- <p> I aim to make robots smarter and more expressive, not just functional, but systems that can genuinely help people and look awesome doing it. My research focuses on scaling up reinforcement learning by improving sample efficiency and generalization, 
+        with the long-term goal of enabling robots to compose and refine complex behaviors building upon the skills evolution already gave us.</p> -->
       <p>Email: shivamsood [AT] u.nus.edu
       </p>
     </td>
   </tr>
 </table>
 
-<hr/>
-
-<!-- News Section -->
+<!-- News Section (temporarily hidden)
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading>&nbsp;&nbsp;News</sectionheading></td></tr>
+  <tr><td><h2 class="sectionheading" id="news-heading">&nbsp;&nbsp;News</h2></td></tr>
 </table>
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
@@ -135,42 +160,41 @@
       <li><span style="color:#007bff; font-weight:bold;">Mar '22</span> &mdash; Won the gold medal in Inter IIT Tech Meet 2022 in DRDO UAV based UGV navigation challenge</li>
       <li><span style="color:#007bff; font-weight:bold;">Nov '21</span> &mdash; Started working as a Robotics Software Development intern at <a href="https://vecros.com/">Vecros</a></li>
       <li><span style="color:#007bff; font-weight:bold;">Sep '21</span> &mdash; Won the 1st place at the <a href="http://robots.uc3m.es/challenge-iros2021/">IROS-RSJ Navigation and Manipulation Challenge 2021</a></li>
-      <li><span style="color:#007bff; font-weight:bold;">Mar '20</span> &mdash; Joined <a href="https://agv.iitkgp.ac.in/" target="_blank">Autonomous Ground Vehicle Research Group</a> as a Mechatronics Team Member</li>
-      <li><span style="color:#007bff; font-weight:bold;">Jul '19</span> &mdash; Started my undergraduate journey at <a href="http://www.iitkgp.ac.in/" target="_blank">IIT Kharagpur</a></li>
+      <li><span style="color:#007bff; font-weight:bold;">Mar '20</span> &mdash; Joined <a href="https://agv.iitkgp.ac.in/" target="_blank" rel="noopener noreferrer">Autonomous Ground Vehicle Research Group</a> as a Mechatronics Team Member</li>
+      <li><span style="color:#007bff; font-weight:bold;">Jul '19</span> &mdash; Started my undergraduate journey at <a href="http://www.iitkgp.ac.in/" target="_blank" rel="noopener noreferrer">IIT Kharagpur</a></li>
     </ul>
 
-    <button id="show-more-news" 
-      class="btn btn-link btn-sm"
-      style="margin: 0px 0; display: block; background: none; box-shadow: none;">
+    <button id="show-more-news" type="button" class="news-toggle-btn">
       Show More <span aria-hidden="true">&#x25BC;</span>
     </button>
   </td></tr>
 </table>
+-->
 
 
 
 <hr/>
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading>&nbsp;&nbsp;Publications</sectionheading></td></tr>
+  <tr><td><h2 class="sectionheading">&nbsp;&nbsp;Publications</h2></td></tr>
 </table>
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
 
     <tr>
     <td width="40%" valign="top" align="center"><a href="https://marmotlab.github.io/APEX/">
-    <video playsinline autoplay loop muted src="images/apex/decap canter.mp4" poster="./images/loading-icon.gif" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+    <video playsinline autoplay loop muted src="images/apex/decap canter.mp4" aria-label="APEX locomotion demonstration video" title="APEX locomotion demonstration" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
     </a></td>
     <td width="60%" valign="top">
-      <p><a href="https://marmotlab.github.io/APEX/" id="APEX">
-      <heading>APEX: Action Priors Enable Efficient Exploration for Skill Imitation on Articulated Robots</heading></a><br>
-      Shivam Sood, Laukik B Nakhwa, Yuhong Cao, Sun Ge, Guillaume Sartoretti<br>
+      <p><a href="https://marmotlab.github.io/APEX/">
+      <span class="entry-title">APEX: Action Priors Enable Efficient Exploration for Skill Imitation on Articulated Robots</span></a><br>
+      Shivam Sood, Laukik Nakhwa, Sun Ge, Yuhong Cao, Jin Cheng, Fatemah Zargarbashi, Taerim Yoon, Sungjoon Choi, Stelian Coros, Guillaume Sartoretti<br>
       <br>
       </p>
-      <div class="paper" id="APEX">
+      <div class="paper">
       <a href="https://marmotlab.github.io/APEX/">webpage</a> |
       <a href="https://arxiv.org/pdf/2505.10022">pdf</a> |
-      <a href="javascript:toggleblock('apex')">abstract</a> |
+      <button type="button" class="abstract-toggle" data-target="apex" aria-controls="apex" aria-expanded="false">abstract</button> |
       <!-- <a shape="rect" href="javascript:togglebib('hat')" class="togglebib">bibtex</a> | -->
       <a href="https://arxiv.org/abs/2505.10022">arXiv</a> |
       <a href="https://github.com/marmotlab/APEX">code</a> 
@@ -186,44 +210,43 @@
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="https://www.youtube.com/watch?v=O1lcry7sHNQ">
-          <img src="images/decap/decap.png" alt="sym" width="90%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+          <img src="images/decap/decap.png" alt="DecAP quadruped locomotion preview" width="90%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
       </a>
     </td>
     <td width="60%" valign="top">
-      <p><a href="https://www.youtube.com/watch?v=O1lcry7sHNQ" id="DecAP">
-      <heading>DecAP : Decaying Action Priors for Accelerated Learning of Torque-Based Legged Locomotion Policies</heading></a><br>
+      <p><a href="https://www.youtube.com/watch?v=O1lcry7sHNQ">
+      <span class="entry-title">DecAP : Decaying Action Priors for Accelerated Learning of Torque-Based Legged Locomotion Policies</span></a><br>
       Shivam Sood, Sun Ge, Peizhuo Li, Guillaume Sartoretti<br>
       IROS 2024</p>
 
-      <div class="paper" id="DecAP">
+      <div class="paper">
       <!-- <a href="https://seqml.github.io/a2ls/">webpage</a> | -->
       <a href="https://arxiv.org/pdf/2310.05714">pdf</a> |
-      <a href="javascript:toggleblock('decap')">abstract</a> |
+      <button type="button" class="abstract-toggle" data-target="decap" aria-controls="decap" aria-expanded="false">abstract</button> |
       <!-- <a shape="rect" href="javascript:togglebib('a2ls')" class="togglebib">bibtex</a> | -->
       <a href="https://arxiv.org/abs/2310.05714">arXiv</a> |
       <a href="https://github.com/marmotlab/decaying_action_priors">code</a> 
 
       <p align="justify"> <i id="decap">Optimal Control for legged robots has gone through a paradigm shift from position-based to torque-based control, owing to the latter’s compliant and robust nature. In parallel to this shift, the community has also turned to Deep Reinforcement Learning (DRL) as a promising approach to directly learn locomotion policies for complex real-life tasks. However, most end-to-end DRL approaches still operate in position space, mainly because learning in torque space is often sample-inefficient and does not consistently converge to natural gaits. To address these challenges, we introduce Decaying Action Priors (DecAP), a novel three-stage framework to learn and deploy torque policies for legged locomotion.</i></p>
-</pre>
       </div>
     </td>
   </tr>
 
   <tr>
     <td width="40%" valign="top" align="center"><a href="https://www.youtube.com/watch?v=k89QdImcqdo">
-    <video playsinline autoplay loop muted src="images/force_control/stoch_combined.mp4" poster="./images/loading-icon.gif" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+    <video playsinline autoplay loop muted src="images/force_control/stoch_combined.mp4" aria-label="Force control quadruped locomotion video" title="Force control quadruped locomotion" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
     </a></td>
     <td width="60%" valign="top">
-      <p><a href="https://www.youtube.com/watch?v=k89QdImcqdo" id="APEX">
-      <heading>Force control for Robust Quadruped Locomotion: A Linear Policy Approach</heading></a><br>
+      <p><a href="https://www.youtube.com/watch?v=k89QdImcqdo">
+      <span class="entry-title">Force control for Robust Quadruped Locomotion: A Linear Policy Approach</span></a><br>
       Aditya Shirwatkar, Vamshi Kumar Kurva, Devaraju Vinoda, Aman Singh, Aditya Sagi,
       Himanshu Lodha, Bhavya Giri Goswami, Shivam Sood, Ketan Nehete, Shishir Kolathaya<br>
       ICRA 2023
       </p>
-      <div class="paper" id="hat">
+      <div class="paper">
       <a href="https://www.stochlab.com/projects/LinPolForceControlQuad.html">webpage</a> |
       <a href="https://www.stochlab.com/papers/force_lp_ICRA_2023.pdf">pdf</a> |
-      <a href="javascript:toggleblock('stoch_force')">abstract</a> |
+      <button type="button" class="abstract-toggle" data-target="stoch_force" aria-controls="stoch_force" aria-expanded="false">abstract</button> |
       <!-- <a shape="rect" href="javascript:togglebib('hat')" class="togglebib">bibtex</a> | -->
       <a href="https://ieeexplore.ieee.org/document/10161080">paper</a> |
       <!-- <a href="https://github.com/RogerQi/human-policy">code</a>  -->
@@ -239,19 +262,19 @@
   <tr>
     <td width="40%" valign="top" align="center">
       <a href="https://www.youtube.com/watch?v=JAr6UzAz4KQ">
-          <img src="images/iccr_nav/multi_wp_paper.png" alt="sym" width="90%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+          <img src="images/iccr_nav/multi_wp_paper.png" alt="Multiple waypoint navigation paper preview" width="90%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
       </a>
     </td>
     <td width="60%" valign="top">
-      <p><a href="https://www.youtube.com/watch?v=JAr6UzAz4KQ" id="ICCR">
-      <heading>Multiple Waypoint Navigation in Unknown Indoor Environments</heading></a><br>
+      <p><a href="https://www.youtube.com/watch?v=JAr6UzAz4KQ">
+      <span class="entry-title">Multiple Waypoint Navigation in Unknown Indoor Environments</span></a><br>
       Shivam Sood, Jaskaran Singh Sodhi, Parv Maheshwari, Karan Uppal, Debashish Chakravarty<br>
       ICCR 2022</p>
 
-      <div class="paper" id="ICCR">
+      <div class="paper">
       <!-- <a href="https://seqml.github.io/a2ls/">webpage</a> | -->
       <a href="https://arxiv.org/pdf/2209.08663">pdf</a> |
-      <a href="javascript:toggleblock('iccr')">abstract</a> |
+      <button type="button" class="abstract-toggle" data-target="iccr" aria-controls="iccr" aria-expanded="false">abstract</button> |
       <!-- <a shape="rect" href="javascript:togglebib('a2ls')" class="togglebib">bibtex</a> | -->
       <a href="https://arxiv.org/abs/2209.08663">arXiv</a> |
       <a href="https://github.com/thisisjaskaran/multi-waypoint-indoor-navigation">code</a> 
@@ -272,7 +295,6 @@
                     of randomly generated obstacle maps, intermediate waypoints and
                     start-goal pairs, with results indicating significant reduction in
                     computational costs, with high accuracies and robust control.</i></p>
-</pre>
       </div>
     </td>
   </tr>
@@ -283,43 +305,43 @@
 
 <!-- COMPETITIONS -->
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading>&nbsp;&nbsp;Competitions</sectionheading></td></tr>
+  <tr><td><h2 class="sectionheading">&nbsp;&nbsp;Competitions</h2></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
 
     <tr>
     <td width="40%" valign="top" align="center">
-        <img src="images/uav_guide_ugv/uav_guide_ugv.png" alt="sym" width="90%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+        <img src="images/uav_guide_ugv/uav_guide_ugv.png" alt="UAV-guided UGV navigation challenge preview" width="90%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
     </td>
     <td width="60%" valign="top">
       <p>
-      <heading>DRDO UAV-Guided UGV Navigation Challenge</heading><br>
+      <span class="entry-title">DRDO UAV-Guided UGV Navigation Challenge</span><br>
+      </p>
 
-      <div class="paper" id="ICCR">
+      <div class="paper">
       <!-- <a href="https://seqml.github.io/a2ls/">webpage</a> | -->
       <a href="https://drive.google.com/file/d/1QQeVtomUrKjfDxIv9BoyOJJC1fja6nSD/view">Presentation</a> 
 
-      <p align="justify"> <i id="iccr">Co-organised by IIT Kharagpur and DRDO, India, as part of the Inter IIT Tech Meet 10.0, this challenge aimed to develop a UAV-guided navigation system which could guide cars on snowy terrains.
+      <p align="justify"> <i>Co-organised by IIT Kharagpur and DRDO, India, as part of the Inter IIT Tech Meet 10.0, this challenge aimed to develop a UAV-guided navigation system which could guide cars on snowy terrains.
           Our team won first place, and also secured the Inter IIT Tech Meet 10.0 overall General Championship.</i></p>
-</pre>
       </div>
     </td>
   </tr>
 
     <tr>
     <td width="40%" valign="top" align="center">
-          <img src="images/iros_rsj_nav/iros_logo.png" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></img>
+          <img src="images/iros_rsj_nav/iros_logo.png" alt="IROS-RSJ Navigation and Manipulation Challenge logo" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
     </td>
     <td width="60%" valign="top">
       <p>
-      <heading>IROS-RSJ Navigation and Manipulation Challenge 2021</heading><br>
+      <span class="entry-title">IROS-RSJ Navigation and Manipulation Challenge 2021</span><br>
       </p>
 
-      <div class="paper" id="autocost">
+      <div class="paper">
       <a href="https://robots.uc3m.es/challenge-iros2021/">Challenge</a> |
       <a href="https://github.com/shivam-sood00/Drona-InterIIT23">Code</a>
 
-      <p align="justify"> <i id="wkfg_abs">The task was to develop (in simulation) a mobile robot with a manipulator capable of multiple waypoint navigation and exploration. As the winning solution, we created a probabilistic route planner, which finds near-optimal solutions while respecting the computational capabilities of the robot and integrated this with an adaptive MPC.
+      <p align="justify"> <i>The task was to develop (in simulation) a mobile robot with a manipulator capable of multiple waypoint navigation and exploration. As the winning solution, we created a probabilistic route planner, which finds near-optimal solutions while respecting the computational capabilities of the robot and integrated this with an adaptive MPC.
         We presented this work at the <a href="https://www.iccr.net/">International Conference on Control and Robotics 2022</a> in our <a href="https://arxiv.org/abs/2209.08663">paper</a> "Multiple Waypoint Navigation in Unknown Indoor Environments"
       </i></p>
 
@@ -329,18 +351,18 @@
 
   <tr>
     <td width="40%" valign="top" align="center">
-          <video playsinline autoplay loop muted src="images/pluto_drone/pluto_drone.mp4" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+          <video playsinline autoplay loop muted src="images/pluto_drone/pluto_drone.mp4" aria-label="Pluto drone swarm challenge video" title="Pluto drone swarm challenge" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
     </td>
     <td width="60%" valign="top">
       <p>
-      <heading>Pluto Drone Swarm Challenge</heading><br>
+      <span class="entry-title">Pluto Drone Swarm Challenge</span><br>
       </p>
 
-      <div class="paper" id="autocost">
+      <div class="paper">
       <a href="https://github.com/shivam-sood00/Drona-InterIIT23">Code</a> 
 
 
-      <p align="justify"> <i id="wkfg_abs">Co-organised by IIT Kanpur and Drona Aviation, India, the goal of this challenge was to develop a vision based state feedback control for an indoor multi-drone system handling socket communication with the flight controller without the use of ROS. I led the team for this competition, won first place, and also secured the Inter IIT Tech Meet 11.0 overall General Championship.</i></p>
+      <p align="justify"> <i>Co-organised by IIT Kanpur and Drona Aviation, India, the goal of this challenge was to develop a vision based state feedback control for an indoor multi-drone system handling socket communication with the flight controller without the use of ROS. I led the team for this competition, won first place, and also secured the Inter IIT Tech Meet 11.0 overall General Championship.</i></p>
 
       </div>
     </td>
@@ -352,26 +374,26 @@
 
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading>&nbsp;&nbsp;Projects</sectionheading></td></tr>
+  <tr><td><h2 class="sectionheading">&nbsp;&nbsp;Projects</h2></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
 
   <tr>
     <td width="40%" valign="top" align="center">
-          <video playsinline autoplay loop muted src="images/drl_yuna/drl_yuna.mp4" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+          <video playsinline autoplay loop muted src="images/drl_yuna/drl_yuna.mp4" aria-label="Deep reinforcement learning control for Yuna hexapod video" title="Yuna deep RL control demo" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
     </td>
     <td width="60%" valign="top">
-      <p><a href="https://shivam-sood.notion.site/Yuna-fe4b1e04055b42a594a6b71a255318e1" id="AUTOCOST">
-      <heading>End-to-End Deep RL based joint control for a hexapod robot</heading></a><br>
+      <p><a href="https://shivam-sood.notion.site/Yuna-fe4b1e04055b42a594a6b71a255318e1">
+      <span class="entry-title">End-to-End Deep RL based joint control for a hexapod robot</span></a><br>
       </p>
 
-      <div class="paper" id="autocost">
+      <div class="paper">
       <a href="https://shivam-sood.notion.site/Yuna-fe4b1e04055b42a594a6b71a255318e1"> Documentation </a> 
       <!-- <a href="https://github.com/oscardhc/Forum"> iOS Code</a> | -->
       <!-- <a href="http://wukefenggao.cn"> Project Page</a> | -->
       <!-- <a href="https://www.bilibili.com/video/BV1Rp4y187ZJ"> Farewell Video</a> -->
 
-      <p align="justify"> <i id="wkfg_abs">This project is concerned with training a Proximal Policy Optimization based parallel DRL control policy for control of a hexapod robot lovingly named Yuna (based on a game character with different eye colors since that’s what Yuna’s LEDs look like :p).</i></p>
+      <p align="justify"> <i>This project is concerned with training a Proximal Policy Optimization based parallel DRL control policy for control of a hexapod robot lovingly named Yuna (based on a game character with different eye colors since that’s what Yuna’s LEDs look like :p).</i></p>
 
       </div>
     </td>
@@ -379,15 +401,15 @@
 
   <tr>
     <td width="40%" valign="top" align="center">
-    <video playsinline autoplay loop muted src="images/RF_MPC/rf_mpc.mp4" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+    <video playsinline autoplay loop muted src="images/RF_MPC/rf_mpc.mp4" aria-label="Representation-free MPC quadruped locomotion video" title="Representation-free MPC demo" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
     </td>
     <td width="60%" valign="top">
       <p>
-      <heading>Representation-Free MPC control for quadruped locomotion</heading><br>
+      <span class="entry-title">Representation-Free MPC control for quadruped locomotion</span><br>
       </p>
-      <div class="paper" id="hat">      
+      <div class="paper">      
 
-      <p align="justify"> <i id="stoch_force">The goal of the project was to develop a Representation Free Model Predictive Control for a in-house quadruped robot named Stoch3. This included solving for optimal Ground Reaction Forces based on a Single Rigid Body dynamics model while following gaits programmed using a finite state machine. The model used rotation matrices directly to get rid of the issues with euler angles (gimbal lock) and with quaternions(unwinding).</i></p>
+      <p align="justify"> <i>The goal of the project was to develop a Representation Free Model Predictive Control for a in-house quadruped robot named Stoch3. This included solving for optimal Ground Reaction Forces based on a Single Rigid Body dynamics model while following gaits programmed using a finite state machine. The model used rotation matrices directly to get rid of the issues with euler angles (gimbal lock) and with quaternions(unwinding).</i></p>
 
       </div>
     </td>
@@ -395,20 +417,20 @@
 
   <tr>
     <td width="40%" valign="top" align="center">
-          <video playsinline autoplay loop muted src="images/agv_mpc/agv_mpc.mp4" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+          <video playsinline autoplay loop muted src="images/agv_mpc/agv_mpc.mp4" aria-label="AGV geometric and optimal control video" title="AGV control demonstration" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
     </td>
     <td width="60%" valign="top">
       <p>
-      <heading>Optimal and Geometric controls for AGVs</heading><br>
+      <span class="entry-title">Optimal and Geometric controls for AGVs</span><br>
       </p>
 
-      <div class="paper" id="autocost">
+      <div class="paper">
       <a href="https://github.com/shivam-sood00/Linear-Quadraric-Regulator"> LQR Code </a> |
       <a href="https://github.com/shivam-sood00/geometric_controls"> Geometric Controls </a> |
       <a href="https://github.com/shivam-sood00/MPC-for-autonomous-vehicles"> MPC Code</a> |
       <!-- <a href="https://www.bilibili.com/video/BV1Rp4y187ZJ"> Farewell Video</a> -->
 
-      <p align="justify"> <i id="wkfg_abs">This project is concerned with training a Proximal Policy Optimization based parallel DRL control policy for control of a hexapod robot lovingly named Yuna (based on a game character with different eye colors since that’s what Yuna’s LEDs look like :p).</i></p>
+      <p align="justify"> <i>This project is concerned with training a Proximal Policy Optimization based parallel DRL control policy for control of a hexapod robot lovingly named Yuna (based on a game character with different eye colors since that’s what Yuna’s LEDs look like :p).</i></p>
 
       </div>
     </td>
@@ -416,17 +438,17 @@
 
   <tr>
     <td width="40%" valign="top" align="center">
-          <video playsinline autoplay loop muted src="images/mpc_turtlebot/mpc_turtlebot.mp4" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+          <video playsinline autoplay loop muted src="images/mpc_turtlebot/mpc_turtlebot.mp4" aria-label="Mobile robot MPC trajectory tracking video" title="Mobile robot MPC demonstration" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
     </td>
     <td width="60%" valign="top">
       <p>
-      <heading>Multiple and Single shooting MPC for mobile robots</heading><br>
+      <span class="entry-title">Multiple and Single shooting MPC for mobile robots</span><br>
       </p>
 
-      <div class="paper" id="autocost">
+      <div class="paper">
       <a href="https://github.com/shivam-sood00/Model-Predictive-Control"> Code </a> 
 
-      <p align="justify"> <i id="wkfg_abs">This code includes various implementation of a model predictive control including multiple and single shooting methods. It includes both implementations for point tracking as well as trajectory tracking for mobile robots.</i></p>
+      <p align="justify"> <i>This code includes various implementation of a model predictive control including multiple and single shooting methods. It includes both implementations for point tracking as well as trajectory tracking for mobile robots.</i></p>
 
       </div>
     </td>
@@ -438,7 +460,7 @@
 
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading>&nbsp;&nbsp;Reviewer Service</sectionheading></td></tr>
+  <tr><td><h2 class="sectionheading">&nbsp;&nbsp;Reviewer Service</h2></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
   <tr>
@@ -474,8 +496,11 @@
 </table>
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading>&nbsp;&nbsp;Extras</sectionheading></td></tr>
+  <tr><td><h2 class="sectionheading">&nbsp;&nbsp;Extras</h2></td></tr>
 </table>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+  <tr>
+    <td>
       <ul style="padding-left: 1.2em; margin-bottom: 0;">
           
               <b>My artwork:</b>
@@ -485,7 +510,8 @@
               <a href="blog/Model-Predictive-Control-(MPC).html">Model Predictive Control</a>
           
       </ul>
-
+    </td>
+  </tr>
 </table>
 
 <hr/>
@@ -493,54 +519,38 @@
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="2">
     <tr><td><br><p align="right">
     Website template from <a href="http://www.cs.berkeley.edu/~barron/">here</a> and <a href="https://tairanhe.com/">here</a>
-    </font></p></td></tr>
+    </p></td></tr>
 </table>
 
   </td></tr>
 </table>
-<script xml:space="preserve" language="JavaScript">
+<script>
 hideallbibs();
+['apex', 'decap', 'stoch_force', 'iccr'].forEach(hideblock);
 </script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('apex');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('decap');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('stoch_force');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('iccr');
-</script>
-</body>
-
 <script>
 (function () {
+  const abstractToggles = Array.from(document.querySelectorAll('.abstract-toggle'));
+  abstractToggles.forEach((toggle) => {
+    const targetId = toggle.getAttribute('data-target');
+    const target = document.getElementById(targetId);
+    if (!target) return;
+    toggle.setAttribute('aria-expanded', target.style.display !== 'none' ? 'true' : 'false');
+    toggle.addEventListener('click', function () {
+      toggleblock(targetId);
+      toggle.setAttribute('aria-expanded', target.style.display !== 'none' ? 'true' : 'false');
+    });
+  });
+
   const newsList = document.getElementById('news-list');
   const showMoreBtn = document.getElementById('show-more-news');
-
-  // Apply the same style to Show More as Show Less
-  showMoreBtn.style.marginTop = '1rem';
-  showMoreBtn.style.background = '#007bff';
-  showMoreBtn.style.color = 'white';
-  showMoreBtn.style.border = 'none';
-  showMoreBtn.style.padding = '0.5rem 1rem';
-  showMoreBtn.style.fontSize = '1rem';
-  showMoreBtn.style.borderRadius = '4px';
-  showMoreBtn.style.cursor = 'pointer';
+  if (!newsList || !showMoreBtn) return;
 
   // Create Show Less button
   const showLessBtn = document.createElement('button');
   showLessBtn.id = 'show-less-news';
-  showLessBtn.style.marginTop = '1rem';
-  showLessBtn.style.background = '#007bff';
-  showLessBtn.style.color = 'white';
-  showLessBtn.style.border = 'none';
-  showLessBtn.style.padding = '0.5rem 1rem';
-  showLessBtn.style.fontSize = '1rem';
-  showLessBtn.style.borderRadius = '4px';
-  showLessBtn.style.cursor = 'pointer';
+  showLessBtn.type = 'button';
+  showLessBtn.className = 'news-toggle-btn';
   showLessBtn.style.display = 'none';
   showLessBtn.innerHTML = 'Show Less <span aria-hidden="true">&#x25B2;</span>';
 
@@ -573,11 +583,10 @@ hideallbibs();
   showMoreBtn.addEventListener('click', expandList);
   showLessBtn.addEventListener('click', function () {
     collapseList();
-    const heading = document.querySelector('sectionheading');
+    const heading = document.getElementById('news-heading');
     if (heading) heading.scrollIntoView({ behavior: 'smooth' });
   });
 })();
 </script>
-
-
+</body>
 </html>

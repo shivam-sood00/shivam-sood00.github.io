@@ -75,6 +75,21 @@
   .abstract-toggle:hover {
     color: #f09228;
   }
+  .repo-stars {
+    align-items: center;
+    color: #777;
+    display: none;
+    font-size: 0.9em;
+    gap: 3px;
+    margin-left: 4px;
+    vertical-align: baseline;
+    white-space: nowrap;
+  }
+  .repo-stars svg {
+    fill: currentColor;
+    height: 0.95em;
+    width: 0.95em;
+  }
   .news-toggle-btn {
     margin-top: 1rem;
     background: #007bff;
@@ -122,9 +137,6 @@
     <a href="https://www.linkedin.com/in/shivam-sood-a79866196/">LinkedIn</a> |
     </p>
     <!-- <p align="center" style="margin-top:-8px;"><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 156px; height: 20px;" title="Twitter Follow Button" src="https://platform.twitter.com/widgets/follow_button.2f70fb173b9000da126c79afe2098f02.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=TairanHe99&amp;show_count=false&amp;show_screen_name=true&amp;size=m&amp;time=1706734206165" data-screen-name=""></iframe><script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p> -->
-      <p align="center" style="margin-top:-8px;">
-      <a href="blog/index.html" style="font-weight:bold; color:#1772d0;">📖 Blog</a>
-    </p>  
   </td>
     <td width="70%" valign="top" align="justify">
       <p>Hello! I am a robotics Ph.D. student at <a href="https://nus.edu.sg/">National University of Singapore</a>, advised by <a href="https://www.marmotlab.org/bio.html"> Prof. Guillaume Sartoretti</a>.
@@ -181,6 +193,29 @@
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
 
+  <tr>
+    <td width="40%" valign="top" align="center">
+      <a href="https://maker-rat.github.io/morph/">
+          <img src="https://maker-rat.github.io/morph/static/images/framework.png" alt="X-Morph framework diagram" width="90%" style="padding-top:0px; padding-bottom:0px; border-radius:15px; height: auto;">
+      </a>
+    </td>
+    <td width="60%" valign="top">
+      <p><a href="https://maker-rat.github.io/morph/">
+      <span class="entry-title">X-Morph: Human Motion Priors for Scalable Robot Learning Across Morphologies</span></a><br>
+      Ritwik Sharma*, Shivam Sood*, Arhaan Jain, Shyam Charan Kesavamoorthi, Chengyang He, Guillaume Sartoretti<br>
+      arXiv 2026</p>
+
+      <div class="paper">
+      <a href="https://maker-rat.github.io/morph/">webpage</a> |
+      <a href="https://arxiv.org/pdf/2606.30290">pdf</a> |
+      <button type="button" class="abstract-toggle" data-target="xmorph" aria-controls="xmorph" aria-expanded="false">abstract</button> |
+      <a href="https://arxiv.org/abs/2606.30290">arXiv</a>
+
+      <p align="justify"> <i id="xmorph">Recent progress in humanoid behavior models has been driven in large part by abundant human motion data, but comparable motion data is scarce for non-humanoid legged robots such as quadrupeds, hexapods, and quadruped manipulators. A promising alternative is to repurpose human motion across embodiments; however, direct retargeting often produces motions that are visually plausible yet physically inconsistent or difficult to track under robot dynamics. We present X-Morph, a human-motion-to-robot-behavior pipeline that converts human motion into deployable locomotion and loco-manipulation policies for diverse non-humanoid legged morphologies. A cross-morphology retargeting stage converts human motions into kinematically plausible, intent-preserving robot references, which are then tracked by a privileged RL policy and distilled into a causal student policy. We evaluate X-Morph on three morphologically distinct platforms: a quadruped, a hexapod, and a quadruped equipped with a manipulator. The resulting policies track diverse retargeted motions, generalize to unseen human motions, and support downstream use cases including video-based teleoperation, behavior-prior control, and text-conditioned motion generation. These results suggest that large-scale human motion can serve as a substrate for learning broad, reusable behavior priors beyond humanoid robots.</i></p>
+      </div>
+    </td>
+  </tr>
+
     <tr>
     <td width="40%" valign="top" align="center"><a href="https://marmotlab.github.io/APEX/">
     <video playsinline autoplay loop muted src="images/apex/decap canter.mp4" aria-label="APEX locomotion demonstration video" title="APEX locomotion demonstration" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
@@ -189,15 +224,14 @@
       <p><a href="https://marmotlab.github.io/APEX/">
       <span class="entry-title">APEX: Action Priors Enable Efficient Exploration for Skill Imitation on Articulated Robots</span></a><br>
       Shivam Sood, Laukik Nakhwa, Sun Ge, Yuhong Cao, Jin Cheng, Fatemah Zargarbashi, Taerim Yoon, Sungjoon Choi, Stelian Coros, Guillaume Sartoretti<br>
-      <br>
-      </p>
+      IROS 2026</p>
       <div class="paper">
       <a href="https://marmotlab.github.io/APEX/">webpage</a> |
       <a href="https://arxiv.org/pdf/2505.10022">pdf</a> |
       <button type="button" class="abstract-toggle" data-target="apex" aria-controls="apex" aria-expanded="false">abstract</button> |
       <!-- <a shape="rect" href="javascript:togglebib('hat')" class="togglebib">bibtex</a> | -->
       <a href="https://arxiv.org/abs/2505.10022">arXiv</a> |
-      <a href="https://github.com/marmotlab/APEX">code</a> 
+      <a href="https://github.com/marmotlab/APEX">code</a><span class="repo-stars" data-repo="marmotlab/APEX" aria-label="GitHub stars" title="GitHub stars"></span>
 
       
 
@@ -225,7 +259,7 @@
       <button type="button" class="abstract-toggle" data-target="decap" aria-controls="decap" aria-expanded="false">abstract</button> |
       <!-- <a shape="rect" href="javascript:togglebib('a2ls')" class="togglebib">bibtex</a> | -->
       <a href="https://arxiv.org/abs/2310.05714">arXiv</a> |
-      <a href="https://github.com/marmotlab/decaying_action_priors">code</a> 
+      <a href="https://github.com/marmotlab/decaying_action_priors">code</a><span class="repo-stars" data-repo="marmotlab/decaying_action_priors" aria-label="GitHub stars" title="GitHub stars"></span>
 
       <p align="justify"> <i id="decap">Optimal Control for legged robots has gone through a paradigm shift from position-based to torque-based control, owing to the latter’s compliant and robust nature. In parallel to this shift, the community has also turned to Deep Reinforcement Learning (DRL) as a promising approach to directly learn locomotion policies for complex real-life tasks. However, most end-to-end DRL approaches still operate in position space, mainly because learning in torque space is often sample-inefficient and does not consistently converge to natural gaits. To address these challenges, we introduce Decaying Action Priors (DecAP), a novel three-stage framework to learn and deploy torque policies for legged locomotion.</i></p>
       </div>
@@ -465,9 +499,15 @@
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
   <tr>
     <td style="padding:20px;width:100%;vertical-align:middle">
-      Conference on Robot Learning <b>(CORL)</b> 2025
+      Conference on Robot Learning <b>(CORL)</b>, 2025, 2026
       <br>
-      International Conference on Robotics and Automation <b>(ICRA)</b> 2025
+      International Conference on Intelligent Robots and Systems <b>(IROS)</b> 2026
+      <br>
+      Conference on Neural Information Processing Systems <b>(NeurIPS)</b> 2026
+      <br>
+      IEEE Transactions on Robotics <b>(TRO)</b> 2026
+      <br>
+      International Conference on Robotics and Automation <b>(ICRA)</b>, 2025, 2026
       <br>
       <!-- International Conference on Intelligent Robots and Systems <b>(IROS)</b> 2025
       <br>
@@ -526,7 +566,7 @@
 </table>
 <script>
 hideallbibs();
-['apex', 'decap', 'stoch_force', 'iccr'].forEach(hideblock);
+['xmorph', 'apex', 'decap', 'stoch_force', 'iccr'].forEach(hideblock);
 </script>
 <script>
 (function () {
@@ -585,6 +625,69 @@ hideallbibs();
     collapseList();
     const heading = document.getElementById('news-heading');
     if (heading) heading.scrollIntoView({ behavior: 'smooth' });
+  });
+})();
+</script>
+<script>
+(function () {
+  const starEls = Array.from(document.querySelectorAll('.repo-stars[data-repo]'));
+  if (!starEls.length || !window.fetch) return;
+
+  const cacheTtlMs = 6 * 60 * 60 * 1000;
+
+  function formatStars(count) {
+    if (count >= 1000) {
+      const rounded = Math.round(count / 100) / 10;
+      return rounded.toFixed(rounded % 1 === 0 ? 0 : 1) + 'k';
+    }
+    return String(count);
+  }
+
+  function renderStars(el, count) {
+    el.innerHTML = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.56 7.56 0 0 1 8 3.86c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path></svg><span>&#9733; ' + formatStars(count) + '</span>';
+    el.style.display = 'inline-flex';
+  }
+
+  function readCache(repo) {
+    try {
+      const cached = JSON.parse(localStorage.getItem('github-stars:' + repo));
+      if (!cached || typeof cached.count !== 'number' || typeof cached.timestamp !== 'number') return null;
+      return cached;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function writeCache(repo, count) {
+    try {
+      localStorage.setItem('github-stars:' + repo, JSON.stringify({
+        count: count,
+        timestamp: Date.now()
+      }));
+    } catch (error) {
+      // Ignore storage failures; the live count can still render for this page load.
+    }
+  }
+
+  starEls.forEach((el) => {
+    const repo = el.getAttribute('data-repo');
+    const cached = readCache(repo);
+    if (cached) renderStars(el, cached.count);
+    if (cached && Date.now() - cached.timestamp < cacheTtlMs) return;
+
+    fetch('https://api.github.com/repos/' + repo)
+      .then((response) => {
+        if (!response.ok) throw new Error('GitHub API request failed');
+        return response.json();
+      })
+      .then((data) => {
+        if (typeof data.stargazers_count !== 'number') return;
+        writeCache(repo, data.stargazers_count);
+        renderStars(el, data.stargazers_count);
+      })
+      .catch(() => {
+        if (!cached) el.style.display = 'none';
+      });
   });
 })();
 </script>
